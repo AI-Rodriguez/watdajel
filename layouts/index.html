@@ -503,6 +503,11 @@ var T={
     langSwitch:"{{ .Params.lang_switch_en }}"
   }
 };
+/* ─── Safari video autoplay fix ─── */
+document.addEventListener("DOMContentLoaded",function(){
+  var v=document.querySelector(".hero-video");
+  if(v){v.play().catch(function(){});}
+});
 
 var lang="nl";
 
