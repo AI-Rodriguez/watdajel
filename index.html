@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--black:#0F0F0F;--charcoal:#1A1A1A;--g800:#333;--g600:#6B6B6B;--g400:#9A9A9A;--g200:#E0E0E0;--g100:#F5F5F5;--warm:#F8F6F3;--white:#FFF;--burgundy:#6B1D3A;--purple:#5B4FC7;--purple-hover:#4A3FA6;--lavender:#EDE8F5;--lavender-soft:#F5F1FB;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',-apple-system,BlinkMacSystemFont,sans-serif}
+:root{--black:#0F0F0F;--charcoal:#1A1A1A;--g600:#6B6B6B;--g200:#E0E0E0;--g100:#F5F5F5;--warm:#F8F6F3;--white:#FFF;--burgundy:#6B1D3A;--purple:#5B4FC7;--purple-hover:#4A3FA6;--lavender:#EDE8F5;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',-apple-system,sans-serif}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:72px}
 body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
@@ -20,43 +20,45 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .n--s{background:rgba(255,255,255,.96);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);box-shadow:0 1px 0 rgba(0,0,0,.06)}
 .n-i{max-width:1320px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between}
 .n-logo{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:-.02em;text-decoration:none;transition:color .3s}
-.n--t .n-logo{color:var(--white)} .n--s .n-logo{color:var(--burgundy)}
+.n--t .n-logo{color:var(--white)}.n--s .n-logo{color:var(--burgundy)}
 .n-links{display:flex;align-items:center;gap:4px}
-.n-link{font-family:var(--sans);font-size:14px;font-weight:500;text-decoration:none;padding:8px 16px;border-radius:6px;transition:all .25s;cursor:pointer;background:none;border:none;white-space:nowrap}
-.n--t .n-link{color:rgba(255,255,255,.8)} .n--t .n-link:hover{color:var(--white);background:rgba(255,255,255,.1)}
-.n--s .n-link{color:var(--g600)} .n--s .n-link:hover{color:var(--charcoal);background:var(--g100)}
+.n-link{font-family:var(--sans);font-size:14px;font-weight:500;padding:8px 16px;border-radius:6px;transition:all .25s;cursor:pointer;background:none;border:none;white-space:nowrap}
+.n--t .n-link{color:rgba(255,255,255,.8)}.n--t .n-link:hover{color:var(--white);background:rgba(255,255,255,.1)}
+.n--s .n-link{color:var(--g600)}.n--s .n-link:hover{color:var(--charcoal);background:var(--g100)}
 .n-lang{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.5px;padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .25s;background:none;border:1.5px solid;margin-left:8px}
-.n--t .n-lang{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.25)} .n--t .n-lang:hover{color:var(--white);border-color:rgba(255,255,255,.5)}
-.n--s .n-lang{color:var(--g600);border-color:var(--g200)} .n--s .n-lang:hover{color:var(--charcoal);border-color:var(--charcoal)}
+.n--t .n-lang{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.25)}.n--t .n-lang:hover{color:var(--white);border-color:rgba(255,255,255,.5)}
+.n--s .n-lang{color:var(--g600);border-color:var(--g200)}.n--s .n-lang:hover{color:var(--charcoal);border-color:var(--charcoal)}
 .n-cta{font-family:var(--sans);font-size:14px;font-weight:600;padding:10px 28px;border-radius:6px;border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;margin-left:12px}
-.n--t .n-cta{background:var(--white);color:var(--charcoal)} .n--t .n-cta:hover{background:rgba(255,255,255,.9);transform:translateY(-1px)}
-.n--s .n-cta{background:var(--charcoal);color:var(--white)} .n--s .n-cta:hover{background:var(--black);transform:translateY(-1px)}
-.n-burger{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative;flex-shrink:0}
+.n--t .n-cta{background:var(--white);color:var(--charcoal)}.n--t .n-cta:hover{transform:translateY(-1px)}
+.n--s .n-cta{background:var(--charcoal);color:var(--white)}.n--s .n-cta:hover{background:var(--black);transform:translateY(-1px)}
+.n-burger{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative}
 .n-burger span{position:absolute;left:0;height:2px;width:100%;transition:all .35s cubic-bezier(.16,1,.3,1);border-radius:1px}
-.n--t .n-burger span{background:var(--white)} .n--s .n-burger span{background:var(--charcoal)}
-.n-burger span:nth-child(1){top:0} .n-burger span:nth-child(2){top:9px} .n-burger span:nth-child(3){top:18px}
+.n--t .n-burger span{background:var(--white)}.n--s .n-burger span{background:var(--charcoal)}
+.n-burger span:nth-child(1){top:0}.n-burger span:nth-child(2){top:9px}.n-burger span:nth-child(3){top:18px}
 .n-burger.open span:nth-child(1){top:9px;transform:rotate(45deg);background:var(--charcoal)}
 .n-burger.open span:nth-child(2){opacity:0}
 .n-burger.open span:nth-child(3){top:9px;transform:rotate(-45deg);background:var(--charcoal)}
 .mm{position:fixed;inset:0;z-index:99;background:var(--white);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:48px;opacity:0;pointer-events:none;transition:opacity .4s}
 .mm.open{opacity:1;pointer-events:all}
-.mm a,.mm button{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--charcoal);text-decoration:none;background:none;border:none;cursor:pointer;padding:10px 0;display:block;transition:color .2s}
-.mm a:hover,.mm button:hover{color:var(--burgundy)}
+.mm button{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--charcoal);background:none;border:none;cursor:pointer;padding:10px 0;display:block;transition:color .2s}
+.mm button:hover{color:var(--burgundy)}
+.mm-lang{font-family:var(--sans)!important;font-size:18px!important;color:var(--g600)!important;margin-top:24px!important}
+.mm-cta{font-family:var(--sans)!important;font-size:20px!important;color:var(--burgundy)!important;margin-top:8px!important}
 
 /* HERO */
 .hero{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:flex-end}
-.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 8s ease-out}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 8s ease-out;background-image:url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&auto=format&q=80')}
 .hero:hover .hero-bg{transform:scale(1.02)}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.2) 0%,rgba(0,0,0,.05) 40%,rgba(0,0,0,.5) 100%)}
 .hero-c{position:relative;z-index:2;max-width:1320px;width:100%;margin:0 auto;padding:0 48px 80px}
 .hero-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,.7);margin-bottom:20px;opacity:0;animation:fu .8s .3s ease forwards}
 .hero-h{font-family:var(--serif);font-weight:600;font-size:clamp(48px,7vw,88px);line-height:1.05;color:var(--white);margin-bottom:20px;letter-spacing:-.02em;opacity:0;animation:fu .8s .5s ease forwards}
 .hero-h em{font-style:italic;font-weight:400}
-.hero-sub{font-family:var(--sans);font-size:17px;line-height:1.65;color:rgba(255,255,255,.8);max-width:520px;margin-bottom:36px;font-weight:400;opacity:0;animation:fu .8s .7s ease forwards}
+.hero-sub{font-family:var(--sans);font-size:17px;line-height:1.65;color:rgba(255,255,255,.8);max-width:520px;margin-bottom:36px;opacity:0;animation:fu .8s .7s ease forwards}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fu .8s .9s ease forwards}
 .btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:14px 32px;border-radius:6px;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;border:none}
-.btn-w{background:var(--white);color:var(--charcoal)} .btn-w:hover{background:rgba(255,255,255,.9);transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
-.btn-g{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.4)} .btn-g:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+.btn-w{background:var(--white);color:var(--charcoal)}.btn-w:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
+.btn-g{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.4)}.btn-g:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
 .hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fu .8s 1.2s ease forwards}
 .hero-scroll span{font-family:var(--sans);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.5)}
 .scroll-line{width:1px;height:40px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
@@ -88,7 +90,7 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .booking-fields{display:grid;grid-template-columns:1fr auto;gap:12px;margin-bottom:20px}
 .b-field{background:#F7F5FA;border-radius:14px;padding:15px 18px;display:flex;align-items:center;gap:12px;border:1.5px solid transparent;transition:border-color .2s}
 .b-field:focus-within{border-color:var(--purple)}
-.b-field svg{width:18px;height:18px;color:var(--purple);flex-shrink:0;stroke:var(--purple);fill:none}
+.b-field svg{width:18px;height:18px;flex-shrink:0;stroke:var(--purple);fill:none}
 .b-field input,.b-field select{border:none;background:transparent;font-family:var(--sans);font-size:15px;font-weight:500;color:var(--charcoal);outline:none;width:100%}
 .b-search{width:100%;padding:16px;border-radius:24px;border:none;background:var(--purple);color:var(--white);font-family:var(--sans);font-size:16px;font-weight:600;cursor:pointer;transition:all .3s;display:block;text-align:center;text-decoration:none}
 .b-search:hover{background:var(--purple-hover);transform:translateY(-1px);box-shadow:0 8px 24px rgba(91,79,199,.3)}
@@ -118,11 +120,10 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .sc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1);display:block}
 .sc:hover .sc-img img{transform:scale(1.04)}
 .sc-body{padding:24px 28px 28px}
-.sc-t{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--charcoal);margin-bottom:10px;letter-spacing:-.01em}
+.sc-t{font-family:var(--serif);font-size:22px;font-weight:600;color:var(--charcoal);margin-bottom:10px}
 .sc-d{font-family:var(--sans);font-size:15px;line-height:1.6;color:var(--g600);margin-bottom:20px}
 .sc-l{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--charcoal);display:inline-flex;align-items:center;gap:8px;transition:gap .25s}
 .sc:hover .sc-l{gap:12px}
-.sc-l svg{width:16px;height:16px}
 
 /* CTA */
 .cta{padding:100px 48px;background:var(--charcoal);text-align:center}
@@ -145,8 +146,7 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .ft-social svg{width:16px;height:16px;fill:rgba(255,255,255,.6)}
 .ft-social a:hover svg{fill:var(--white)}
 .ft h4{font-family:var(--sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--white);margin-bottom:16px}
-.ft ul{list-style:none}
-.ft li{margin-bottom:10px}
+.ft ul{list-style:none}.ft li{margin-bottom:10px}
 .ft li a{color:rgba(255,255,255,.45);text-decoration:none;font-family:var(--sans);font-size:14px;transition:color .2s}
 .ft li a:hover{color:rgba(255,255,255,.8)}
 .ft-bot{max-width:1320px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;font-family:var(--sans);font-size:13px}
@@ -156,287 +156,274 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 
 @media(max-width:1024px){
   .n-links{display:none}.n-burger{display:block}
-  .intro-in,.sol-grid{grid-template-columns:1fr}
-  .intro-in{gap:40px}.gal-item{width:300px;height:200px}
-  .ft-in{grid-template-columns:1fr}
+  .intro-in,.sol-grid{grid-template-columns:1fr}.intro-in{gap:40px}
+  .gal-item{width:300px;height:200px}.ft-in{grid-template-columns:1fr}
   .booking-fields{grid-template-columns:1fr}
 }
 @media(max-width:640px){
   .n-i{padding:0 24px}.hero-c{padding:0 24px 60px}
   .gal,.intro,.sol,.booking,.cta,.ft{padding-left:24px;padding-right:24px}
   .hero-h{font-size:40px}.gal-item{width:260px;height:180px}
-  .mm{padding:24px}.mm a,.mm button{font-size:28px}
+  .mm{padding:24px}.mm button{font-size:28px}
   .ft-bot{flex-direction:column;gap:8px;text-align:center}
 }
 </style>
 </head>
 <body>
-<div id="root"></div>
-<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script type="text/babel">
-const { useState, useEffect, useRef } = React;
 
-/* ─── Production: swap these for real Watdajel photography ─── */
-const IMG = {
-  hero: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&h=1080&fit=crop&auto=format&q=80",
-  gallery: [
-    "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop&auto=format&q=80",
-    "https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop&auto=format&q=80",
-    "https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=800&h=600&fit=crop&auto=format&q=80",
-    "https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=800&h=600&fit=crop&auto=format&q=80",
-    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&auto=format&q=80",
-  ],
-  vergader: "https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?w=800&h=500&fit=crop&auto=format&q=80",
-  kantoor: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=500&fit=crop&auto=format&q=80",
-  event: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop&auto=format&q=80",
-  cowork: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=500&fit=crop&auto=format&q=80",
-  intro: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop&auto=format&q=80",
-};
-
-const T = {
-  nl: {
-    heroTag:"Creative & Sustainable Workspaces · Utrecht",heroTitle1:"Welkom bij",heroTitle2:"Watdajel",
-    heroSub:"De perfecte ruimte voor iedereen die een toffe sustainable werkplek zoekt. In deze circulaire hub — in het hart van Utrecht — stap je een ervaring binnen die inspiratie en creativiteit oplevert.",
-    btnBook:"Boek een ruimte",btnTour:"Plan een rondleiding",scroll:"Scroll",galleryTitle:"Ontdek de ruimte",
-    introTag:"Over Watdajel",introTitle:"Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt",
-    introP1:"Steeds meer mensen breken met vaste structuren en zoeken een plek die past bij hoe zij willen leven en werken. Bij Watdajel Workspaces vind je die plek.",
-    introP2:"Een duurzame, inspirerende werkplek in hartje Utrecht waar focus vanzelf komt, ontmoetingen je energie geven, en werken voelt als iets wat je wílt. Waar ondernemerschap, duurzaamheid, cultuur en community samenkomen.",
-    bookingTitle1:"Boek je",bookingMeeting:"vergaderruimte",bookingWorkspace:"werkplek",
-    bookingSubtitle:"Powered by Wonders of Work — direct beschikbaarheid checken",
-    bookingTabMeeting:"Meetingspace",bookingTabWorkspace:"Workspace",bookingDate:"Datum & tijd kiezen",
-    bookingPerson:"persoon",bookingPersons:"personen",bookingSearch:"Zoeken",
-    solTag:"Workspace oplossingen",solTitle:"Waar innovatie en community samenkomen",
-    solSub:"Of je nu komt om te focussen of anderen te ontmoeten — in onze workspaces kan het allemaal.",
-    cardVergader:"Vergaderruimtes",cardVergaderDesc:"Inspirerende en unieke vergaderruimtes ingericht met veel kunst en groen. Ideaal voor brainstormsessies, workshops, strategieweken en presentaties.",
-    cardKantoor:"Kantoorruimtes",cardKantoorDesc:"Flexibele werkplekken en vaste kantoren voor ondernemers, freelancers en teams. Circulair ingericht, met een community die je energie geeft.",
-    cardEvent:"Event Spaces",cardEventDesc:"300m² creatieve ruimte die zich aanpast aan jouw visie. Volledig uitgerust met geluid, licht en beamer — van boeklanceringen tot conferenties.",
-    cardCowork:"Coworking",cardCoworkDesc:"Dagpassen en flexibele memberships in een creatieve omgeving. Word onderdeel van de Watdajel community en werk nooit meer alleen.",
-    cardLink:"Meer info",ctaTitle:"Vind je nieuwe werkplek in het hart van Utrecht",
-    ctaText:"Benieuwd naar onze ruimte of wil je een rondleiding? We informeren je graag over de mogelijkheden.",
-    ctaBtn:"Boek een rondleiding",ctaEmail:"info@watdajel.com",
-    footerDesc:"Creative & sustainable workspaces in het hart van Utrecht. De toekomst van werken begint hier.",
-    footerPages:"Pagina's",footerMore:"Meer",footerVision:"Visie & Missie",footerSustain:"Duurzaamheid",
-    footerHistory:"Geschiedenis",footerPrivacy:"Privacy",footerBookOnline:"Boek online",footerRights:"Alle rechten voorbehouden.",
-    navItems:["Welkom","Vergaderruimtes","Kantoorruimtes","Creatief en Duurzaam","Contact"],
-  },
-  en: {
-    heroTag:"Creative & Sustainable Workspaces · Utrecht",heroTitle1:"Welcome to",heroTitle2:"Watdajel",
-    heroSub:"The perfect space for anyone looking for a great sustainable workplace. In this circular hub — in the heart of Utrecht — you step into an experience that delivers inspiration and creativity.",
-    btnBook:"Book a space",btnTour:"Schedule a tour",scroll:"Scroll",galleryTitle:"Discover the space",
-    introTag:"About Watdajel",introTitle:"We believe the environment you work in makes a world of difference",
-    introP1:"More and more people are breaking with fixed structures and looking for a place that fits how they want to live and work. At Watdajel Workspaces, you'll find that place.",
-    introP2:"A sustainable, inspiring workspace in the heart of Utrecht where focus comes naturally, encounters give you energy, and work feels like something you want. Where entrepreneurship, sustainability, culture and community come together.",
-    bookingTitle1:"Book your",bookingMeeting:"meeting space",bookingWorkspace:"workspace",
-    bookingSubtitle:"Powered by Wonders of Work — check availability instantly",
-    bookingTabMeeting:"Meeting space",bookingTabWorkspace:"Workspace",bookingDate:"Select date & time",
-    bookingPerson:"person",bookingPersons:"persons",bookingSearch:"Search",
-    solTag:"Workspace solutions",solTitle:"Where innovation meets community",
-    solSub:"Whether you come to focus or to meet others — in our workspaces, anything is possible.",
-    cardVergader:"Meeting Rooms",cardVergaderDesc:"Inspiring and unique meeting rooms furnished with art and greenery. Ideal for brainstorms, workshops, strategy weeks and presentations.",
-    cardKantoor:"Office Spaces",cardKantoorDesc:"Flexible workspaces and permanent offices for entrepreneurs, freelancers and teams. Circular design, with a community that energises you.",
-    cardEvent:"Event Spaces",cardEventDesc:"300m² of creative space that adapts to your vision. Fully equipped with sound, lighting and projector — from book launches to conferences.",
-    cardCowork:"Coworking",cardCoworkDesc:"Day passes and flexible memberships in a creative environment. Join the Watdajel community and never work alone again.",
-    cardLink:"Learn more",ctaTitle:"Find your new workspace in the heart of Utrecht",
-    ctaText:"Curious about our space or want a tour? We'd love to tell you about the possibilities.",
-    ctaBtn:"Book a tour",ctaEmail:"info@watdajel.com",
-    footerDesc:"Creative & sustainable workspaces in the heart of Utrecht. The future of work starts here.",
-    footerPages:"Pages",footerMore:"More",footerVision:"Vision & Mission",footerSustain:"Sustainability",
-    footerHistory:"History",footerPrivacy:"Privacy",footerBookOnline:"Book online",footerRights:"All rights reserved.",
-    navItems:["Welcome","Meeting Rooms","Office Spaces","Creative & Sustainable","Contact"],
-  },
-};
-
-const NAV_IDS = ["welkom","vergaderruimtes","kantoorruimtes","creatief-duurzaam","contact"];
-const SOCIALS = [
-  {name:"LinkedIn",url:"https://linkedin.com/company/watdajel",d:"M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.12-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zM.02 24h4.96V7.99H.02V24zM8.48 7.99h4.74v2.19h.07c.66-1.25 2.27-2.57 4.67-2.57C22.95 7.61 24 11.26 24 16.05V24h-4.96v-7.05c0-1.68-.03-3.84-2.34-3.84-2.34 0-2.7 1.83-2.7 3.72V24H8.48V7.99z"},
-  {name:"Facebook",url:"https://www.facebook.com/watdajel.art",d:"M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"},
-  {name:"Instagram",url:"https://www.instagram.com/watdajel_festival/",d:"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"},
-  {name:"X",url:"https://x.com/watdajel",d:"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"},
-  {name:"YouTube",url:"https://www.youtube.com/channel/UC0HMw_EKYSx_-ttwN5oz0_w",d:"M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"},
-];
-
-const Arrow = () => <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="1" y1="8" x2="14" y2="8"/><polyline points="9,3 14,8 9,13"/></svg>;
-const CalIcon = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>;
-const UserIcon = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>;
-
-function App() {
-  const [lang, setLang] = useState("nl");
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [bookType, setBookType] = useState("meeting");
-  const galRef = useRef(null);
-  const t = T[lang];
-
-  useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", fn);
-    return () => window.removeEventListener("scroll", fn);
-  }, []);
-
-  const go = (id) => { setMenuOpen(false); document.getElementById(id)?.scrollIntoView({behavior:"smooth"}); };
-
-  return (
-    <div>
-      {/* NAV */}
-      <nav className={`n ${scrolled?"n--s":"n--t"}`}>
-        <div className="n-i">
-          <a href="#" className="n-logo" onClick={e=>{e.preventDefault();go("welkom")}}>Watdajel</a>
-          <div className="n-links">
-            {t.navItems.map((l,i)=><button key={i} className="n-link" onClick={()=>go(NAV_IDS[i])}>{l}</button>)}
-            <button className="n-lang" onClick={()=>setLang(lang==="nl"?"en":"nl")}>{lang==="nl"?"EN":"NL"}</button>
-            <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" className="n-cta">{t.btnBook}</a>
-          </div>
-          <button className={`n-burger ${menuOpen?"open":""}`} onClick={()=>setMenuOpen(!menuOpen)}><span/><span/><span/></button>
-        </div>
-      </nav>
-
-      {/* MOBILE */}
-      <div className={`mm ${menuOpen?"open":""}`}>
-        {t.navItems.map((l,i)=><button key={i} onClick={()=>go(NAV_IDS[i])}>{l}</button>)}
-        <button onClick={()=>{setLang(lang==="nl"?"en":"nl");setMenuOpen(false)}} style={{fontSize:18,fontFamily:"var(--sans)",color:"var(--g600)",marginTop:24}}>
-          {lang==="nl"?"Switch to English":"Schakel naar Nederlands"}
-        </button>
-        <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" style={{fontSize:20,fontFamily:"var(--sans)",color:"var(--burgundy)",marginTop:8}}>{t.btnBook} →</a>
-      </div>
-
-      {/* HERO */}
-      <section className="hero" id="welkom">
-        <div className="hero-bg" style={{backgroundImage:`url(${IMG.hero})`}}/>
-        <div className="hero-ov"/>
-        <div className="hero-c">
-          <div className="hero-tag">{t.heroTag}</div>
-          <h1 className="hero-h">{t.heroTitle1}<br/><em>{t.heroTitle2}</em></h1>
-          <p className="hero-sub">{t.heroSub}</p>
-          <div className="hero-btns">
-            <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" className="btn btn-w">{t.btnBook}</a>
-            <button className="btn btn-g" onClick={()=>go("contact")}>{t.btnTour}</button>
-          </div>
-        </div>
-        <div className="hero-scroll"><span>{t.scroll}</span><div className="scroll-line"/></div>
-      </section>
-
-      {/* GALLERY */}
-      <section className="gal">
-        <div className="gal-hd">
-          <h2 className="gal-t">{t.galleryTitle}</h2>
-          <div className="gal-nav">
-            <button className="gal-btn" onClick={()=>galRef.current?.scrollBy({left:-400,behavior:"smooth"})}>←</button>
-            <button className="gal-btn" onClick={()=>galRef.current?.scrollBy({left:400,behavior:"smooth"})}>→</button>
-          </div>
-        </div>
-        <div className="gal-track" ref={galRef}>
-          {IMG.gallery.map((s,i)=><div className="gal-item" key={i}><img src={s} alt="" loading="lazy"/></div>)}
-        </div>
-      </section>
-
-      {/* BOOKING */}
-      <section className="booking" id="booking">
-        <div className="booking-in">
-          <h2>{t.bookingTitle1} <em>{bookType==="meeting"?t.bookingMeeting:t.bookingWorkspace}</em></h2>
-          <p className="booking-sub">{t.bookingSubtitle}</p>
-          <div className="booking-card">
-            <div className="toggle">
-              <button className={`toggle-btn ${bookType==="meeting"?"on":""}`} onClick={()=>setBookType("meeting")}>{t.bookingTabMeeting}</button>
-              <button className={`toggle-btn ${bookType==="workspace"?"on":""}`} onClick={()=>setBookType("workspace")}>{t.bookingTabWorkspace}</button>
-            </div>
-            <div className="booking-fields">
-              <div className="b-field"><CalIcon/><input type="text" placeholder={t.bookingDate}/></div>
-              <div className="b-field" style={{minWidth:120}}><UserIcon/><select defaultValue="1">{[...Array(20)].map((_,i)=><option key={i} value={i+1}>{i+1} {i===0?t.bookingPerson:t.bookingPersons}</option>)}</select></div>
-            </div>
-            <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" className="b-search">{t.bookingSearch}</a>
-          </div>
-        </div>
-      </section>
-
-      {/* INTRO */}
-      <section className="intro">
-        <div className="intro-in">
-          <div>
-            <div className="intro-tag">{t.introTag}</div>
-            <h2 className="intro-t">{t.introTitle}</h2>
-            <div className="intro-txt"><p>{t.introP1}</p><p>{t.introP2}</p></div>
-          </div>
-          <div className="intro-img"><img src={IMG.intro} alt="" loading="lazy"/></div>
-        </div>
-      </section>
-
-      {/* SOLUTIONS */}
-      <section className="sol" id="vergaderruimtes">
-        <div className="sol-in">
-          <div className="sol-hd">
-            <div className="sol-tag">{t.solTag}</div>
-            <h2 className="sol-t">{t.solTitle}</h2>
-            <p className="sol-sub">{t.solSub}</p>
-          </div>
-          <div className="sol-grid" id="kantoorruimtes">
-            {[
-              {img:IMG.vergader,title:t.cardVergader,desc:t.cardVergaderDesc},
-              {img:IMG.kantoor,title:t.cardKantoor,desc:t.cardKantoorDesc},
-              {img:IMG.event,title:t.cardEvent,desc:t.cardEventDesc},
-              {img:IMG.cowork,title:t.cardCowork,desc:t.cardCoworkDesc},
-            ].map((c,i)=>(
-              <a key={i} className="sc" href="#contact" onClick={e=>{e.preventDefault();go("contact")}}>
-                <div className="sc-img"><img src={c.img} alt={c.title} loading="lazy"/></div>
-                <div className="sc-body">
-                  <h3 className="sc-t">{c.title}</h3>
-                  <p className="sc-d">{c.desc}</p>
-                  <span className="sc-l">{t.cardLink} <Arrow/></span>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="cta" id="creatief-duurzaam">
-        <div className="cta-in">
-          <h2 className="cta-t">{t.ctaTitle}</h2>
-          <p className="cta-p">{t.ctaText}</p>
-          <p className="cta-email"><a href={`mailto:${t.ctaEmail}`}>{t.ctaEmail}</a></p>
-          <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" className="cta-btn">{t.ctaBtn}</a>
-        </div>
-      </section>
-
-      {/* FOOTER */}
-      <footer className="ft" id="contact">
-        <div className="ft-in">
-          <div>
-            <div className="ft-brand">Watdajel</div>
-            <p>{t.footerDesc}</p>
-            <div className="ft-social">
-              {SOCIALS.map(s=><a key={s.name} href={s.url} target="_blank" rel="noopener noreferrer" title={s.name}><svg viewBox="0 0 24 24"><path d={s.d}/></svg></a>)}
-            </div>
-          </div>
-          <div>
-            <h4>{t.footerPages}</h4>
-            <ul>
-              {t.navItems.map((l,i)=><li key={i}><a href={`#${NAV_IDS[i]}`} onClick={e=>{e.preventDefault();go(NAV_IDS[i])}}>{l}</a></li>)}
-              <li><a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer">{t.footerBookOnline}</a></li>
-            </ul>
-          </div>
-          <div>
-            <h4>{t.footerMore}</h4>
-            <ul>
-              <li><a href="#creatief-duurzaam" onClick={e=>{e.preventDefault();go("creatief-duurzaam")}}>{t.footerVision}</a></li>
-              <li><a href="#creatief-duurzaam" onClick={e=>{e.preventDefault();go("creatief-duurzaam")}}>{t.footerSustain}</a></li>
-              <li><a href="https://watdajel.com/geschiedenis/" target="_blank" rel="noopener noreferrer">{t.footerHistory}</a></li>
-              <li><a href="https://watdajel.com/privacy/" target="_blank" rel="noopener noreferrer">{t.footerPrivacy}</a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="ft-bot">
-          <span>© 2026 Watdajel — Creative & Sustainable Workspaces</span>
-          <span>{t.footerRights}</span>
-        </div>
-      </footer>
+<!-- NAV -->
+<nav class="n n--t" id="nav">
+  <div class="n-i">
+    <a href="#welkom" class="n-logo">Watdajel</a>
+    <div class="n-links">
+      <button class="n-link" onclick="go('welkom')" data-t="navItems.0">Welkom</button>
+      <button class="n-link" onclick="go('vergaderruimtes')" data-t="navItems.1">Vergaderruimtes</button>
+      <button class="n-link" onclick="go('kantoorruimtes')" data-t="navItems.2">Kantoorruimtes</button>
+      <button class="n-link" onclick="go('creatief-duurzaam')" data-t="navItems.3">Creatief en Duurzaam</button>
+      <button class="n-link" onclick="go('contact')" data-t="navItems.4">Contact</button>
+      <button class="n-lang" id="langBtn" onclick="toggleLang()">EN</button>
+      <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" class="n-cta" data-t="btnBook">Boek een ruimte</a>
     </div>
-  );
+    <button class="n-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <button onclick="go('welkom')" data-t="navItems.0">Welkom</button>
+  <button onclick="go('vergaderruimtes')" data-t="navItems.1">Vergaderruimtes</button>
+  <button onclick="go('kantoorruimtes')" data-t="navItems.2">Kantoorruimtes</button>
+  <button onclick="go('creatief-duurzaam')" data-t="navItems.3">Creatief en Duurzaam</button>
+  <button onclick="go('contact')" data-t="navItems.4">Contact</button>
+  <button class="mm-lang" onclick="toggleLang();toggleMenu()" data-t="langSwitch">Switch to English</button>
+  <button class="mm-cta" onclick="window.open('https://wondersofwork.nl/en/','_blank')" data-t="btnBookArrow">Boek een ruimte →</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="welkom">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-c">
+    <div class="hero-tag" data-t="heroTag">Creative & Sustainable Workspaces · Utrecht</div>
+    <h1 class="hero-h"><span data-t="heroTitle1">Welkom bij</span><br><em data-t="heroTitle2">Watdajel</em></h1>
+    <p class="hero-sub" data-t="heroSub">De perfecte ruimte voor iedereen die een toffe sustainable werkplek zoekt. In deze circulaire hub — in het hart van Utrecht — stap je een ervaring binnen die inspiratie en creativiteit oplevert.</p>
+    <div class="hero-btns">
+      <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" class="btn btn-w" data-t="btnBook">Boek een ruimte</a>
+      <button class="btn btn-g" onclick="go('contact')" data-t="btnTour">Plan een rondleiding</button>
+    </div>
+  </div>
+  <div class="hero-scroll"><span data-t="scroll">Scroll</span><div class="scroll-line"></div></div>
+</section>
+
+<!-- GALLERY -->
+<section class="gal">
+  <div class="gal-hd">
+    <h2 class="gal-t" data-t="galleryTitle">Ontdek de ruimte</h2>
+    <div class="gal-nav">
+      <button class="gal-btn" onclick="scrollGal(-1)">←</button>
+      <button class="gal-btn" onclick="scrollGal(1)">→</button>
+    </div>
+  </div>
+  <div class="gal-track" id="galTrack">
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=600&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&h=600&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1604328698692-f76ea9498e76?w=800&h=600&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1600508774634-4e11d34730e2?w=800&h=600&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+    <div class="gal-item"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="booking-in">
+    <h2><span data-t="bookingTitle1">Boek je</span> <em id="bookingTypeLabel" data-t="bookingMeeting">vergaderruimte</em></h2>
+    <p class="booking-sub" data-t="bookingSubtitle">Powered by Wonders of Work — direct beschikbaarheid checken</p>
+    <div class="booking-card">
+      <div class="toggle">
+        <button class="toggle-btn on" id="togMeeting" onclick="setBookType('meeting')" data-t="bookingTabMeeting">Meetingspace</button>
+        <button class="toggle-btn" id="togWorkspace" onclick="setBookType('workspace')" data-t="bookingTabWorkspace">Workspace</button>
+      </div>
+      <div class="booking-fields">
+        <div class="b-field">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <input type="text" id="bookingDateInput" placeholder="Datum & tijd kiezen" data-t-placeholder="bookingDate">
+        </div>
+        <div class="b-field" style="min-width:120px">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <select id="personSelect"></select>
+        </div>
+      </div>
+      <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" class="b-search" data-t="bookingSearch">Zoeken</a>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-in">
+    <div>
+      <div class="intro-tag" data-t="introTag">Over Watdajel</div>
+      <h2 class="intro-t" data-t="introTitle">Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt</h2>
+      <div class="intro-txt">
+        <p data-t="introP1">Steeds meer mensen breken met vaste structuren en zoeken een plek die past bij hoe zij willen leven en werken. Bij Watdajel Workspaces vind je die plek.</p>
+        <p data-t="introP2">Een duurzame, inspirerende werkplek in hartje Utrecht waar focus vanzelf komt, ontmoetingen je energie geven, en werken voelt als iets wat je wílt. Waar ondernemerschap, duurzaamheid, cultuur en community samenkomen.</p>
+      </div>
+    </div>
+    <div class="intro-img"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="sol" id="vergaderruimtes">
+  <div class="sol-in">
+    <div class="sol-hd">
+      <div class="sol-tag" data-t="solTag">Workspace oplossingen</div>
+      <h2 class="sol-t" data-t="solTitle">Waar innovatie en community samenkomen</h2>
+      <p class="sol-sub" data-t="solSub">Of je nu komt om te focussen of anderen te ontmoeten — in onze workspaces kan het allemaal.</p>
+    </div>
+    <div class="sol-grid" id="kantoorruimtes">
+      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?w=800&h=500&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+        <div class="sc-body"><h3 class="sc-t" data-t="cardVergader">Vergaderruimtes</h3><p class="sc-d" data-t="cardVergaderDesc">Inspirerende en unieke vergaderruimtes ingericht met veel kunst en groen. Ideaal voor brainstormsessies, workshops, strategieweken en presentaties.</p><span class="sc-l"><span data-t="cardLink">Meer info</span> →</span></div>
+      </a>
+      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=800&h=500&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+        <div class="sc-body"><h3 class="sc-t" data-t="cardKantoor">Kantoorruimtes</h3><p class="sc-d" data-t="cardKantoorDesc">Flexibele werkplekken en vaste kantoren voor ondernemers, freelancers en teams. Circulair ingericht, met een community die je energie geeft.</p><span class="sc-l"><span data-t="cardLink">Meer info</span> →</span></div>
+      </a>
+      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&h=500&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+        <div class="sc-body"><h3 class="sc-t" data-t="cardEvent">Event Spaces</h3><p class="sc-d" data-t="cardEventDesc">300m² creatieve ruimte die zich aanpast aan jouw visie. Volledig uitgerust met geluid, licht en beamer — van boeklanceringen tot conferenties.</p><span class="sc-l"><span data-t="cardLink">Meer info</span> →</span></div>
+      </a>
+      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=500&fit=crop&auto=format&q=80" alt="" loading="lazy"></div>
+        <div class="sc-body"><h3 class="sc-t" data-t="cardCowork">Coworking</h3><p class="sc-d" data-t="cardCoworkDesc">Dagpassen en flexibele memberships in een creatieve omgeving. Word onderdeel van de Watdajel community en werk nooit meer alleen.</p><span class="sc-l"><span data-t="cardLink">Meer info</span> →</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="creatief-duurzaam">
+  <div class="cta-in">
+    <h2 class="cta-t" data-t="ctaTitle">Vind je nieuwe werkplek in het hart van Utrecht</h2>
+    <p class="cta-p" data-t="ctaText">Benieuwd naar onze ruimte of wil je een rondleiding? We informeren je graag over de mogelijkheden.</p>
+    <p class="cta-email"><a href="mailto:info@watdajel.com">info@watdajel.com</a></p>
+    <a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" class="cta-btn" data-t="ctaBtn">Boek een rondleiding</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="ft" id="contact">
+  <div class="ft-in">
+    <div>
+      <div class="ft-brand">Watdajel</div>
+      <p data-t="footerDesc">Creative & sustainable workspaces in het hart van Utrecht. De toekomst van werken begint hier.</p>
+      <div class="ft-social">
+        <a href="https://linkedin.com/company/watdajel" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.12-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zM.02 24h4.96V7.99H.02V24zM8.48 7.99h4.74v2.19h.07c.66-1.25 2.27-2.57 4.67-2.57C22.95 7.61 24 11.26 24 16.05V24h-4.96v-7.05c0-1.68-.03-3.84-2.34-3.84-2.34 0-2.7 1.83-2.7 3.72V24H8.48V7.99z"/></svg></a>
+        <a href="https://www.facebook.com/watdajel.art" target="_blank" rel="noopener noreferrer" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+        <a href="https://www.instagram.com/watdajel_festival/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+        <a href="https://x.com/watdajel" target="_blank" rel="noopener noreferrer" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC0HMw_EKYSx_-ttwN5oz0_w" target="_blank" rel="noopener noreferrer" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 data-t="footerPages">Pagina's</h4>
+      <ul>
+        <li><a href="#welkom" data-t="navItems.0">Welkom</a></li>
+        <li><a href="#vergaderruimtes" data-t="navItems.1">Vergaderruimtes</a></li>
+        <li><a href="#kantoorruimtes" data-t="navItems.2">Kantoorruimtes</a></li>
+        <li><a href="#creatief-duurzaam" data-t="navItems.3">Creatief en Duurzaam</a></li>
+        <li><a href="#contact" data-t="navItems.4">Contact</a></li>
+        <li><a href="https://wondersofwork.nl/en/" target="_blank" rel="noopener noreferrer" data-t="footerBookOnline">Boek online</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-t="footerMore">Meer</h4>
+      <ul>
+        <li><a href="#creatief-duurzaam" data-t="footerVision">Visie & Missie</a></li>
+        <li><a href="#creatief-duurzaam" data-t="footerSustain">Duurzaamheid</a></li>
+        <li><a href="https://watdajel.com/geschiedenis/" target="_blank" rel="noopener noreferrer" data-t="footerHistory">Geschiedenis</a></li>
+        <li><a href="https://watdajel.com/privacy/" target="_blank" rel="noopener noreferrer" data-t="footerPrivacy">Privacy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <span>© 2026 Watdajel — Creative & Sustainable Workspaces</span>
+    <span data-t="footerRights">Alle rechten voorbehouden.</span>
+  </div>
+</footer>
+
+<script>
+/* ─── Translations ─── */
+var T={
+  nl:{heroTag:"Creative & Sustainable Workspaces · Utrecht",heroTitle1:"Welkom bij",heroTitle2:"Watdajel",heroSub:"De perfecte ruimte voor iedereen die een toffe sustainable werkplek zoekt. In deze circulaire hub — in het hart van Utrecht — stap je een ervaring binnen die inspiratie en creativiteit oplevert.",btnBook:"Boek een ruimte",btnBookArrow:"Boek een ruimte →",btnTour:"Plan een rondleiding",scroll:"Scroll",galleryTitle:"Ontdek de ruimte",introTag:"Over Watdajel",introTitle:"Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt",introP1:"Steeds meer mensen breken met vaste structuren en zoeken een plek die past bij hoe zij willen leven en werken. Bij Watdajel Workspaces vind je die plek.",introP2:"Een duurzame, inspirerende werkplek in hartje Utrecht waar focus vanzelf komt, ontmoetingen je energie geven, en werken voelt als iets wat je wílt. Waar ondernemerschap, duurzaamheid, cultuur en community samenkomen.",bookingTitle1:"Boek je",bookingMeeting:"vergaderruimte",bookingWorkspace:"werkplek",bookingSubtitle:"Powered by Wonders of Work — direct beschikbaarheid checken",bookingTabMeeting:"Meetingspace",bookingTabWorkspace:"Workspace",bookingDate:"Datum & tijd kiezen",bookingSearch:"Zoeken",solTag:"Workspace oplossingen",solTitle:"Waar innovatie en community samenkomen",solSub:"Of je nu komt om te focussen of anderen te ontmoeten — in onze workspaces kan het allemaal.",cardVergader:"Vergaderruimtes",cardVergaderDesc:"Inspirerende en unieke vergaderruimtes ingericht met veel kunst en groen. Ideaal voor brainstormsessies, workshops, strategieweken en presentaties.",cardKantoor:"Kantoorruimtes",cardKantoorDesc:"Flexibele werkplekken en vaste kantoren voor ondernemers, freelancers en teams. Circulair ingericht, met een community die je energie geeft.",cardEvent:"Event Spaces",cardEventDesc:"300m² creatieve ruimte die zich aanpast aan jouw visie. Volledig uitgerust met geluid, licht en beamer — van boeklanceringen tot conferenties.",cardCowork:"Coworking",cardCoworkDesc:"Dagpassen en flexibele memberships in een creatieve omgeving. Word onderdeel van de Watdajel community en werk nooit meer alleen.",cardLink:"Meer info",ctaTitle:"Vind je nieuwe werkplek in het hart van Utrecht",ctaText:"Benieuwd naar onze ruimte of wil je een rondleiding? We informeren je graag over de mogelijkheden.",ctaBtn:"Boek een rondleiding",footerDesc:"Creative & sustainable workspaces in het hart van Utrecht. De toekomst van werken begint hier.",footerPages:"Pagina's",footerMore:"Meer",footerVision:"Visie & Missie",footerSustain:"Duurzaamheid",footerHistory:"Geschiedenis",footerPrivacy:"Privacy",footerBookOnline:"Boek online",footerRights:"Alle rechten voorbehouden.",langSwitch:"Switch to English","navItems.0":"Welkom","navItems.1":"Vergaderruimtes","navItems.2":"Kantoorruimtes","navItems.3":"Creatief en Duurzaam","navItems.4":"Contact",personSingular:"persoon",personPlural:"personen"},
+  en:{heroTag:"Creative & Sustainable Workspaces · Utrecht",heroTitle1:"Welcome to",heroTitle2:"Watdajel",heroSub:"The perfect space for anyone looking for a great sustainable workplace. In this circular hub — in the heart of Utrecht — you step into an experience that delivers inspiration and creativity.",btnBook:"Book a space",btnBookArrow:"Book a space →",btnTour:"Schedule a tour",scroll:"Scroll",galleryTitle:"Discover the space",introTag:"About Watdajel",introTitle:"We believe the environment you work in makes a world of difference",introP1:"More and more people are breaking with fixed structures and looking for a place that fits how they want to live and work. At Watdajel Workspaces, you'll find that place.",introP2:"A sustainable, inspiring workspace in the heart of Utrecht where focus comes naturally, encounters give you energy, and work feels like something you want. Where entrepreneurship, sustainability, culture and community come together.",bookingTitle1:"Book your",bookingMeeting:"meeting space",bookingWorkspace:"workspace",bookingSubtitle:"Powered by Wonders of Work — check availability instantly",bookingTabMeeting:"Meeting space",bookingTabWorkspace:"Workspace",bookingDate:"Select date & time",bookingSearch:"Search",solTag:"Workspace solutions",solTitle:"Where innovation meets community",solSub:"Whether you come to focus or to meet others — in our workspaces, anything is possible.",cardVergader:"Meeting Rooms",cardVergaderDesc:"Inspiring and unique meeting rooms furnished with art and greenery. Ideal for brainstorms, workshops, strategy weeks and presentations.",cardKantoor:"Office Spaces",cardKantoorDesc:"Flexible workspaces and permanent offices for entrepreneurs, freelancers and teams. Circular design, with a community that energises you.",cardEvent:"Event Spaces",cardEventDesc:"300m² of creative space that adapts to your vision. Fully equipped with sound, lighting and projector — from book launches to conferences.",cardCowork:"Coworking",cardCoworkDesc:"Day passes and flexible memberships in a creative environment. Join the Watdajel community and never work alone again.",cardLink:"Learn more",ctaTitle:"Find your new workspace in the heart of Utrecht",ctaText:"Curious about our space or want a tour? We'd love to tell you about the possibilities.",ctaBtn:"Book a tour",footerDesc:"Creative & sustainable workspaces in the heart of Utrecht. The future of work starts here.",footerPages:"Pages",footerMore:"More",footerVision:"Vision & Mission",footerSustain:"Sustainability",footerHistory:"History",footerPrivacy:"Privacy",footerBookOnline:"Book online",footerRights:"All rights reserved.",langSwitch:"Schakel naar Nederlands","navItems.0":"Welcome","navItems.1":"Meeting Rooms","navItems.2":"Office Spaces","navItems.3":"Creative & Sustainable","navItems.4":"Contact",personSingular:"person",personPlural:"persons"}
+};
+
+var lang="nl";
+var bookType="meeting";
+
+/* ─── Person select ─── */
+function buildPersonSelect(){
+  var s=document.getElementById("personSelect");
+  s.innerHTML="";
+  for(var i=1;i<=20;i++){
+    var o=document.createElement("option");
+    o.value=i;
+    o.textContent=i+" "+(i===1?T[lang].personSingular:T[lang].personPlural);
+    s.appendChild(o);
+  }
+}
+buildPersonSelect();
+
+/* ─── Nav scroll ─── */
+window.addEventListener("scroll",function(){
+  var nav=document.getElementById("nav");
+  if(window.scrollY>60){nav.className="n n--s"}else{nav.className="n n--t"}
+});
+
+/* ─── Navigation ─── */
+function go(id){
+  document.getElementById("mm").classList.remove("open");
+  document.getElementById("burger").classList.remove("open");
+  document.getElementById(id).scrollIntoView({behavior:"smooth"});
 }
 
-ReactDOM.render(<App/>, document.getElementById("root"));
+/* ─── Mobile menu ─── */
+function toggleMenu(){
+  document.getElementById("mm").classList.toggle("open");
+  document.getElementById("burger").classList.toggle("open");
+}
+
+/* ─── Gallery scroll ─── */
+function scrollGal(dir){
+  document.getElementById("galTrack").scrollBy({left:dir*400,behavior:"smooth"});
+}
+
+/* ─── Booking toggle ─── */
+function setBookType(type){
+  bookType=type;
+  document.getElementById("togMeeting").className="toggle-btn"+(type==="meeting"?" on":"");
+  document.getElementById("togWorkspace").className="toggle-btn"+(type==="workspace"?" on":"");
+  document.getElementById("bookingTypeLabel").textContent=type==="meeting"?T[lang].bookingMeeting:T[lang].bookingWorkspace;
+}
+
+/* ─── Language toggle ─── */
+function toggleLang(){
+  lang=lang==="nl"?"en":"nl";
+  document.getElementById("langBtn").textContent=lang==="nl"?"EN":"NL";
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-t]").forEach(function(el){
+    var key=el.getAttribute("data-t");
+    if(T[lang][key]!==undefined) el.textContent=T[lang][key];
+  });
+  document.querySelectorAll("[data-t-placeholder]").forEach(function(el){
+    var key=el.getAttribute("data-t-placeholder");
+    if(T[lang][key]!==undefined) el.placeholder=T[lang][key];
+  });
+  setBookType(bookType);
+  buildPersonSelect();
+}
 </script>
 </body>
 </html>
