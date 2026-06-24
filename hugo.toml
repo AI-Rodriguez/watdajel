@@ -1,0 +1,11 @@
+baseURL = "https://watdajel.pages.dev"
+languageCode = "nl"
+title = "Watdajel — Creative & Sustainable Workspaces"
+
+[build]
+  writeStats = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
