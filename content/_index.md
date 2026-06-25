@@ -31,7 +31,7 @@ intro_p1_nl: "Steeds meer mensen breken met vaste structuren en zoeken een plek 
 intro_p1_en: "More and more people are breaking with fixed structures and looking for a place that fits how they want to live and work. At Watdajel Workspaces, you'll find that place."
 intro_p2_nl: "Een duurzame, inspirerende werkplek in hartje Utrecht waar focus vanzelf komt, ontmoetingen je energie geven, en werken voelt als iets wat je wílt. Waar ondernemerschap, duurzaamheid, cultuur en community samenkomen."
 intro_p2_en: "A sustainable, inspiring workspace in the heart of Utrecht where focus comes naturally, encounters give you energy, and work feels like something you want. Where entrepreneurship, sustainability, culture and community come together."
-intro_image: ""
+intro_image: "jesus-portal.webp"
 
 # ─── SOLUTIONS ───
 sol_tag_nl: "Workspace oplossingen"
