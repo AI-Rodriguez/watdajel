@@ -3,24 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Watdajel — Creative & Sustainable Workspaces</title>
-<meta name="description" content="{{ .Params.hero_sub_nl }}">
-<meta property="og:title" content="Watdajel — Creative & Sustainable Workspaces">
-<meta property="og:description" content="{{ .Params.hero_sub_en }}">
+<title>Watdajel — Creative & Sustainable Spaces</title>
+<meta name="description" content="{{ .Params.hero_title_nl }}">
+<meta property="og:title" content="Watdajel — Creative & Sustainable Spaces">
+<meta property="og:description" content="{{ .Params.hero_title_en }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Site.BaseURL }}">
-<meta property="og:image" content="{{ .Site.BaseURL }}media/render-street.png">
+<meta property="og:image" content="{{ .Site.BaseURL }}media/render-aerial.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--black:#0F0F0F;--charcoal:#1A1A1A;--g600:#6B6B6B;--g200:#E0E0E0;--g100:#F5F5F5;--warm:#F8F6F3;--white:#FFF;--burgundy:#6B1D3A;--purple:#5B4FC7;--purple-hover:#4A3FA6;--lavender:#EDE8F5;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',-apple-system,sans-serif}
+:root{
+  --black:#0F0F0F;--charcoal:#1A1A1A;--g600:#6B6B6B;--g400:#9B9B9B;--g200:#E0E0E0;--g100:#F5F5F5;
+  --warm:#F8F6F3;--white:#FFF;--burgundy:#6B1D3A;--purple:#5B4FC7;
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',-apple-system,sans-serif;
+  --pill:50px;
+}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:72px}
 body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 
-/* NAV */
+/* ── NAV ── */
 .n{position:fixed;top:0;left:0;right:0;z-index:100;transition:all .5s cubic-bezier(.16,1,.3,1)}
 .n--t{background:transparent}
 .n--s{background:rgba(255,255,255,.96);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);box-shadow:0 1px 0 rgba(0,0,0,.06)}
@@ -28,14 +33,14 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .n-logo{font-family:var(--serif);font-weight:700;font-size:26px;letter-spacing:-.02em;text-decoration:none;transition:color .3s}
 .n--t .n-logo{color:var(--white)}.n--s .n-logo{color:var(--burgundy)}
 .n-links{display:flex;align-items:center;gap:4px}
-.n-link{font-family:var(--sans);font-size:14px;font-weight:500;padding:8px 16px;border-radius:6px;transition:all .25s;cursor:pointer;background:none;border:none;white-space:nowrap}
-.n--t .n-link{color:rgba(255,255,255,.8)}.n--t .n-link:hover{color:var(--white);background:rgba(255,255,255,.1)}
+.n-link{font-family:var(--sans);font-size:14px;font-weight:500;padding:8px 18px;border-radius:var(--pill);transition:all .25s;cursor:pointer;background:none;border:none;white-space:nowrap;text-decoration:none;display:inline-block}
+.n--t .n-link{color:rgba(255,255,255,.8)}.n--t .n-link:hover{color:var(--white);background:rgba(255,255,255,.12)}
 .n--s .n-link{color:var(--g600)}.n--s .n-link:hover{color:var(--charcoal);background:var(--g100)}
-.n-lang{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.5px;padding:6px 14px;border-radius:4px;cursor:pointer;transition:all .25s;background:none;border:1.5px solid;margin-left:8px}
+.n-lang{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.5px;padding:7px 16px;border-radius:var(--pill);cursor:pointer;transition:all .25s;background:none;border:1.5px solid;margin-left:8px}
 .n--t .n-lang{color:rgba(255,255,255,.7);border-color:rgba(255,255,255,.25)}.n--t .n-lang:hover{color:var(--white);border-color:rgba(255,255,255,.5)}
 .n--s .n-lang{color:var(--g600);border-color:var(--g200)}.n--s .n-lang:hover{color:var(--charcoal);border-color:var(--charcoal)}
-.n-cta{font-family:var(--sans);font-size:14px;font-weight:600;padding:10px 28px;border-radius:6px;border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;margin-left:12px}
-.n--t .n-cta{background:var(--white);color:var(--charcoal)}.n--t .n-cta:hover{transform:translateY(-1px)}
+.n-cta{font-family:var(--sans);font-size:14px;font-weight:600;padding:10px 26px;border-radius:var(--pill);border:none;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;margin-left:12px}
+.n--t .n-cta{background:var(--white);color:var(--charcoal)}.n--t .n-cta:hover{transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,0,0,.2)}
 .n--s .n-cta{background:var(--charcoal);color:var(--white)}.n--s .n-cta:hover{background:var(--black);transform:translateY(-1px)}
 .n-burger{display:none;background:none;border:none;cursor:pointer;width:28px;height:20px;position:relative}
 .n-burger span{position:absolute;left:0;height:2px;width:100%;transition:all .35s cubic-bezier(.16,1,.3,1);border-radius:1px}
@@ -46,64 +51,76 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .n-burger.open span:nth-child(3){top:9px;transform:rotate(-45deg);background:var(--charcoal)}
 .mm{position:fixed;inset:0;z-index:99;background:var(--white);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:48px;opacity:0;pointer-events:none;transition:opacity .4s}
 .mm.open{opacity:1;pointer-events:all}
-.mm button{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--charcoal);background:none;border:none;cursor:pointer;padding:10px 0;display:block;transition:color .2s}
-.mm button:hover{color:var(--burgundy)}
+.mm a,.mm button{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--charcoal);background:none;border:none;cursor:pointer;padding:10px 0;display:block;transition:color .2s;text-decoration:none}
+.mm a:hover,.mm button:hover{color:var(--burgundy)}
 .mm-lang{font-family:var(--sans)!important;font-size:18px!important;color:var(--g600)!important;margin-top:24px!important}
-.mm-cta{font-family:var(--sans)!important;font-size:20px!important;color:var(--burgundy)!important;margin-top:8px!important}
+.mm-cta{font-family:var(--sans)!important;font-size:20px!important;color:var(--burgundy)!important;margin-top:8px!important;text-decoration:none!important}
 
-/* HERO — VIDEO */
+/* ── HERO ── */
 .hero{position:relative;min-height:100vh;overflow:hidden;display:flex;align-items:flex-end}
 .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.3) 0%,rgba(0,0,0,.05) 40%,rgba(0,0,0,.55) 100%)}
-.hero-c{position:relative;z-index:2;max-width:1320px;width:100%;margin:0 auto;padding:0 48px 80px}
-.hero-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:rgba(255,255,255,.7);margin-bottom:20px;opacity:0;animation:fu .8s .3s ease forwards}
-.hero-h{font-family:var(--serif);font-weight:600;font-size:clamp(48px,7vw,88px);line-height:1.05;color:var(--white);margin-bottom:20px;letter-spacing:-.02em;opacity:0;animation:fu .8s .5s ease forwards}
-.hero-h em{font-style:italic;font-weight:400}
-.hero-sub{font-family:var(--sans);font-size:17px;line-height:1.65;color:rgba(255,255,255,.8);max-width:520px;margin-bottom:36px;opacity:0;animation:fu .8s .7s ease forwards}
-.hero-btns{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fu .8s .9s ease forwards}
-.btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:14px 32px;border-radius:6px;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;border:none}
-.btn-w{background:var(--white);color:var(--charcoal)}.btn-w:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.2)}
-.btn-g{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.4)}.btn-g:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
-.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fu .8s 1.2s ease forwards}
-.hero-scroll span{font-family:var(--sans);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:2px;color:rgba(255,255,255,.5)}
-.scroll-line{width:1px;height:40px;background:rgba(255,255,255,.3);position:relative;overflow:hidden}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.2) 0%,rgba(0,0,0,.05) 40%,rgba(0,0,0,.6) 100%)}
+.hero-c{position:relative;z-index:2;max-width:1320px;width:100%;margin:0 auto;padding:0 48px 100px}
+.hero-h{font-family:var(--serif);font-weight:500;font-style:italic;font-size:clamp(48px,7.5vw,92px);line-height:1.0;color:var(--white);margin-bottom:40px;letter-spacing:-.02em;opacity:0;animation:fu .9s .3s ease forwards}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fu .9s .6s ease forwards}
+.btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:15px 36px;border-radius:var(--pill);cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;border:none;letter-spacing:.01em}
+.btn-w{background:var(--white);color:var(--charcoal)}.btn-w:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(0,0,0,.25)}
+.btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.45)}.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.1)}
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fu .8s 1.1s ease forwards}
+.hero-scroll span{font-family:var(--sans);font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:2.5px;color:rgba(255,255,255,.5)}
+.scroll-line{width:1px;height:40px;background:rgba(255,255,255,.25);position:relative;overflow:hidden}
 .scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:1px;height:100%;background:var(--white);animation:sd 2s ease-in-out infinite}
 
-/* RENDERS / PROJECT */
-.renders{padding:120px 48px;background:var(--white)}
-.renders-in{max-width:1320px;margin:0 auto}
-.renders-hd{text-align:center;margin-bottom:64px}
-.renders-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:16px}
-.renders-t{font-family:var(--serif);font-size:clamp(28px,3.5vw,42px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
-.renders-sub{font-family:var(--sans);font-size:17px;color:var(--g600);max-width:600px;margin:0 auto;line-height:1.65}
-.renders-grid{max-width:720px;margin:0 auto}
-.renders-img{border-radius:12px;overflow:hidden;background:var(--g100)}
-.renders-img img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.16,1,.3,1)}
-.renders-img:hover img{transform:scale(1.02)}
-.renders-label{font-family:var(--sans);font-size:13px;font-weight:500;color:var(--g600);text-align:center;margin-top:12px}
+/* ── FLOOR PLAN ── */
+.plan{width:100%;background:var(--warm);padding:80px 0 0}
+.plan-label{max-width:1320px;margin:0 auto;padding:0 48px 32px;display:flex;align-items:baseline;gap:20px;flex-wrap:wrap}
+.plan-name{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--charcoal);letter-spacing:-.02em}
+.plan-addr{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--g600);letter-spacing:.5px}
+.plan-img{width:100%;overflow:hidden;background:var(--g100);display:flex;align-items:center;justify-content:center;min-height:360px}
+.plan-img img{width:100%;height:auto;display:block}
+.plan-ph{font-family:var(--serif);font-size:18px;color:var(--g400);font-style:italic}
 
-/* INTRO */
-.intro{padding:120px 48px;background:var(--warm)}
-.intro-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.intro-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px}
-.intro-t{font-family:var(--serif);font-size:clamp(28px,3.5vw,42px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:24px}
-.intro-txt{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--g600)}
-.intro-txt p{margin-bottom:16px}
-.intro-img{border-radius:12px;overflow:hidden;aspect-ratio:4/3}
-.intro-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s;display:block}
-.intro-img:hover img{transform:scale(1.03)}
+/* ── FOTO STUDIO BLOCK ── */
+.studio{padding:100px 48px;background:var(--white)}
+.studio-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.studio-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px}
+.studio-t{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:32px}
+.studio-lines{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
+.studio-line{background:var(--g100);border-radius:4px;height:14px}
+.studio-line:nth-child(1){width:90%}.studio-line:nth-child(2){width:75%}.studio-line:nth-child(3){width:82%}
+.studio-btn{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--charcoal);text-decoration:none;display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:var(--pill);border:1.5px solid var(--charcoal);transition:all .3s}
+.studio-btn:hover{background:var(--charcoal);color:var(--white)}
+.studio-photo{aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--g100);cursor:pointer;text-decoration:none;display:flex;align-items:center;justify-content:center}
+.studio-photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.studio-photo:hover img{transform:scale(1.03)}
+.studio-ph{font-family:var(--serif);font-size:16px;color:var(--g400);font-style:italic;text-align:center;padding:24px}
 
-/* SOLUTIONS */
-.sol{padding:120px 48px;background:var(--white)}
+/* ── JESUS BLOCK ── */
+.jesus{padding:100px 48px;background:var(--warm)}
+.jesus-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.jesus-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:24px}
+.jesus-lines{display:flex;flex-direction:column;gap:12px}
+.jesus-line{background:var(--g200);border-radius:4px;height:14px}
+.jesus-line:nth-child(1){width:88%}.jesus-line:nth-child(2){width:72%}.jesus-line:nth-child(3){width:80%}
+.jesus-line:nth-child(4){width:65%}.jesus-line:nth-child(5){width:78%}.jesus-line:nth-child(6){width:55%}
+.jesus-photo{width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--g100);display:flex;align-items:center;justify-content:center;text-decoration:none}
+.jesus-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+.jesus-ph{font-family:var(--serif);font-size:16px;color:var(--g400);font-style:italic;text-align:center;padding:24px}
+.jesus-cta{margin-top:16px;text-align:center}
+.jesus-cta a{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--g600);text-decoration:none;letter-spacing:.5px;border-bottom:1px solid var(--g200);padding-bottom:3px;transition:all .25s}
+.jesus-cta a:hover{color:var(--charcoal);border-color:var(--charcoal)}
+
+/* ── SOLUTIONS ── */
+.sol{padding:100px 48px;background:var(--white)}
 .sol-in{max-width:1320px;margin:0 auto}
-.sol-hd{text-align:center;margin-bottom:64px}
+.sol-hd{text-align:center;margin-bottom:56px}
 .sol-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:16px}
-.sol-t{font-family:var(--serif);font-size:clamp(32px,4vw,48px);font-weight:600;color:var(--charcoal);letter-spacing:-.02em;line-height:1.15;margin-bottom:16px}
-.sol-sub{font-family:var(--sans);font-size:17px;color:var(--g600);max-width:560px;margin:0 auto;line-height:1.65}
+.sol-t{font-family:var(--serif);font-size:clamp(30px,4vw,46px);font-weight:600;color:var(--charcoal);letter-spacing:-.02em;line-height:1.15;margin-bottom:14px}
+.sol-sub{font-family:var(--sans);font-size:16px;color:var(--g600);max-width:520px;margin:0 auto;line-height:1.65}
 .sol-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .sc{border-radius:12px;overflow:hidden;background:var(--g100);transition:all .4s cubic-bezier(.16,1,.3,1);cursor:pointer;text-decoration:none;color:inherit;display:block}
 .sc:hover{transform:translateY(-4px);box-shadow:0 24px 64px rgba(0,0,0,.08)}
-.sc-img{width:100%;aspect-ratio:16/10;overflow:hidden}
+.sc-img{width:100%;aspect-ratio:16/10;overflow:hidden;background:var(--g200)}
 .sc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1);display:block}
 .sc:hover .sc-img img{transform:scale(1.04)}
 .sc-body{padding:24px 28px 28px}
@@ -112,51 +129,27 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .sc-l{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--charcoal);display:inline-flex;align-items:center;gap:8px;transition:gap .25s}
 .sc:hover .sc-l{gap:12px}
 
-/* VISION */
-.vision{padding:120px 48px;background:var(--warm)}
-.vision-in{max-width:800px;margin:0 auto}
-.vision-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px;text-align:center}
-.vision-t{font-family:var(--serif);font-size:clamp(32px,4vw,48px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:32px;text-align:center}
-.vision-t em{font-style:italic;font-weight:400;color:var(--burgundy)}
-.vision-txt{font-family:var(--sans);font-size:16px;line-height:1.85;color:var(--g600)}
-.vision-txt p{margin-bottom:20px}
-.vision-highlight{font-family:var(--serif);font-size:clamp(22px,3vw,28px);font-weight:600;color:var(--charcoal);line-height:1.3;margin:40px 0;padding-left:24px;border-left:3px solid var(--burgundy)}
+/* ── VERGADERING ── */
+.verg{padding:100px 48px;background:var(--warm)}
+.verg-in{max-width:1320px;margin:0 auto}
+.verg-label{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--g400);margin-bottom:20px}
+.verg-t{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:500;font-style:italic;color:var(--charcoal);margin-bottom:40px}
+.verg-img{width:100%;aspect-ratio:16/7;border-radius:12px;overflow:hidden;background:var(--g100);display:flex;align-items:center;justify-content:center}
+.verg-img img{width:100%;height:100%;object-fit:cover;display:block}
+.verg-ph{font-family:var(--serif);font-size:18px;color:var(--g400);font-style:italic}
+.verg-next{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--g400);text-transform:uppercase;letter-spacing:2px;margin-top:24px;text-align:right}
 
-/* HISTORIE */
-.historie{padding:120px 48px;background:var(--white)}
-.historie-in{max-width:900px;margin:0 auto}
-.historie-hd{text-align:center;margin-bottom:64px}
-.historie-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:16px}
-.historie-t{font-family:var(--serif);font-size:clamp(32px,4vw,48px);font-weight:600;color:var(--charcoal);letter-spacing:-.02em;margin-bottom:16px}
-.historie-intro{font-family:var(--serif);font-size:20px;font-style:italic;color:var(--g600);line-height:1.6;max-width:560px;margin:0 auto}
-.tl{position:relative;padding-left:48px}
-.tl::before{content:'';position:absolute;left:15px;top:8px;bottom:8px;width:1px;background:var(--g200)}
-.tl-item{position:relative;margin-bottom:48px}
-.tl-item:last-child{margin-bottom:0}
-.tl-dot{position:absolute;left:-48px;top:6px;width:31px;height:31px;border-radius:50%;background:var(--white);border:2px solid var(--burgundy);display:flex;align-items:center;justify-content:center}
-.tl-dot::after{content:'';width:9px;height:9px;border-radius:50%;background:var(--burgundy)}
-.tl-year{font-family:var(--serif);font-size:28px;font-weight:700;color:var(--burgundy);margin-bottom:8px}
-.tl-text{font-family:var(--sans);font-size:15px;line-height:1.7;color:var(--g600)}
-
-/* CTA */
-.cta{padding:100px 48px;background:var(--charcoal);text-align:center}
-.cta-in{max-width:720px;margin:0 auto}
-.cta-t{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:600;color:var(--white);line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
-.cta-p{font-family:var(--sans);font-size:17px;line-height:1.65;color:rgba(255,255,255,.6);margin-bottom:12px}
-.cta-email{font-family:var(--sans);font-size:15px;color:rgba(255,255,255,.4);margin-bottom:36px}
-.cta-email a{color:rgba(255,255,255,.6);text-decoration:underline;text-underline-offset:3px}
-.cta-btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:16px 40px;border-radius:6px;background:var(--white);color:var(--charcoal);border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s}
-.cta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(0,0,0,.3)}
-
-/* FOOTER */
+/* ── FOOTER ── */
 .ft{background:var(--black);color:rgba(255,255,255,.5);padding:64px 48px 32px}
 .ft-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
 .ft-brand{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--white);margin-bottom:12px}
 .ft p{font-family:var(--sans);font-size:14px;line-height:1.7;margin-bottom:20px}
-.ft-social{display:flex;gap:10px}
-.ft-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.ft-social{display:flex;gap:10px;margin-top:4px}
+.ft-social a,.ft-social span{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;transition:all .3s}
+.ft-social a{cursor:pointer;text-decoration:none}
+.ft-social span{cursor:default}
 .ft-social a:hover{background:var(--burgundy);transform:translateY(-2px)}
-.ft-social svg{width:16px;height:16px;fill:rgba(255,255,255,.6)}
+.ft-social svg{width:16px;height:16px;fill:rgba(255,255,255,.55)}
 .ft-social a:hover svg{fill:var(--white)}
 .ft h4{font-family:var(--sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--white);margin-bottom:16px}
 .ft ul{list-style:none}.ft li{margin-bottom:10px}
@@ -164,20 +157,23 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .ft li a:hover{color:rgba(255,255,255,.8)}
 .ft-bot{max-width:1320px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;font-family:var(--sans);font-size:13px}
 
-@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+/* ── ANIMATIONS ── */
+@keyframes fu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes sd{0%{top:-100%}50%{top:100%}100%{top:100%}}
 
+/* ── RESPONSIVE ── */
 @media(max-width:1024px){
   .n-links{display:none}.n-burger{display:block}
-  .intro-in{grid-template-columns:1fr;gap:40px}
+  .studio-in,.jesus-in{grid-template-columns:1fr;gap:40px}
   .sol-grid{grid-template-columns:1fr}
   .ft-in{grid-template-columns:1fr}
 }
 @media(max-width:640px){
-  .n-i{padding:0 24px}.hero-c{padding:0 24px 60px}
-  .renders,.intro,.sol,.vision,.historie,.cta,.ft{padding-left:24px;padding-right:24px}
-  .hero-h{font-size:40px}
-  .mm{padding:24px}.mm button{font-size:28px}
+  .n-i{padding:0 24px}.hero-c{padding:0 24px 72px}
+  .plan-label{padding:0 24px 24px}
+  .studio,.jesus,.sol,.verg,.ft{padding-left:24px;padding-right:24px}
+  .hero-h{font-size:42px}
+  .mm{padding:24px}.mm a,.mm button{font-size:26px}
   .ft-bot{flex-direction:column;gap:8px;text-align:center}
 }
 </style>
@@ -187,15 +183,16 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 <!-- NAV -->
 <nav class="n n--t" id="nav">
   <div class="n-i">
-    <a href="#welkom" class="n-logo">Watdajel</a>
+    <a href="/" class="n-logo">Watdajel</a>
     <div class="n-links">
-      <button class="n-link" onclick="go('welkom')" data-t="nav0">{{ .Params.nav_0_nl }}</button>
-      <button class="n-link" onclick="go('project')" data-t="nav1">{{ .Params.nav_1_nl }}</button>
-      <button class="n-link" onclick="go('workspaces')" data-t="nav2">{{ .Params.nav_2_nl }}</button>
-      <button class="n-link" onclick="go('over-ons')" data-t="nav3">{{ .Params.nav_3_nl }}</button>
-      <button class="n-link" onclick="go('contact')" data-t="nav4">{{ .Params.nav_4_nl }}</button>
+      <a href="#welkom" class="n-link" data-t="navWelcome">{{ .Params.nav_welcome_nl }}</a>
+      <a href="/steenweg/" class="n-link">Steenweg</a>
+      <a href="/foto-studio/" class="n-link">Foto Studio</a>
+      <a href="#workspaces" class="n-link" data-t="navWork">{{ .Params.nav_work_nl }}</a>
+      <a href="/about/" class="n-link" data-t="navAbout">{{ .Params.nav_about_nl }}</a>
+      <a href="#contact" class="n-link" data-t="navContact">{{ .Params.nav_contact_nl }}</a>
       <button class="n-lang" id="langBtn" onclick="toggleLang()">EN</button>
-      <a href="mailto:info@watdajel.com" class="n-cta" data-t="navCta">{{ .Params.nav_cta_nl }}</a>
+      <a href="/steenweg/" class="n-cta" data-t="navCta">{{ .Params.nav_cta_nl }}</a>
     </div>
     <button class="n-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
@@ -203,78 +200,95 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 
 <!-- MOBILE MENU -->
 <div class="mm" id="mm">
-  <button onclick="go('welkom')" data-t="nav0">{{ .Params.nav_0_nl }}</button>
-  <button onclick="go('project')" data-t="nav1">{{ .Params.nav_1_nl }}</button>
-  <button onclick="go('workspaces')" data-t="nav2">{{ .Params.nav_2_nl }}</button>
-  <button onclick="go('over-ons')" data-t="nav3">{{ .Params.nav_3_nl }}</button>
-  <button onclick="go('contact')" data-t="nav4">{{ .Params.nav_4_nl }}</button>
-  <button class="mm-lang" onclick="toggleLang();toggleMenu()" data-t="langSwitch">{{ .Params.lang_switch_nl }}</button>
-  <button class="mm-cta" onclick="location.href='mailto:info@watdajel.com'" data-t="navCtaArrow">{{ .Params.nav_cta_nl }} →</button>
+  <a href="#welkom" onclick="closeMM()" data-t="navWelcome">{{ .Params.nav_welcome_nl }}</a>
+  <a href="/steenweg/" onclick="closeMM()">Steenweg</a>
+  <a href="/foto-studio/" onclick="closeMM()">Foto Studio</a>
+  <a href="#workspaces" onclick="closeMM()" data-t="navWork">{{ .Params.nav_work_nl }}</a>
+  <a href="/about/" onclick="closeMM()" data-t="navAbout">{{ .Params.nav_about_nl }}</a>
+  <a href="#contact" onclick="closeMM()" data-t="navContact">{{ .Params.nav_contact_nl }}</a>
+  <button class="mm-lang" onclick="toggleLang();closeMM()" data-t="langSwitch">{{ .Params.lang_switch_nl }}</button>
+  <a href="/steenweg/" class="mm-cta" data-t="navCta">{{ .Params.nav_cta_nl }} →</a>
 </div>
 
-<!-- HERO — VIDEO -->
+<!-- HERO -->
 <section class="hero" id="welkom">
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="/media/hero-video.mp4" type="video/mp4">
   </video>
   <div class="hero-ov"></div>
   <div class="hero-c">
-    <div class="hero-tag" data-t="heroTag">{{ .Params.hero_tag }}</div>
-    <h1 class="hero-h"><span data-t="heroTitle1">{{ .Params.hero_title_1_nl }}</span><br><em data-t="heroTitle2">{{ .Params.hero_title_2_nl }}</em></h1>
-    <p class="hero-sub" data-t="heroSub">{{ .Params.hero_sub_nl }}</p>
+    <h1 class="hero-h" data-t="heroTitle">{{ .Params.hero_title_nl }}</h1>
     <div class="hero-btns">
-      <a href="mailto:info@watdajel.com" class="btn btn-w" data-t="heroBtn1">{{ .Params.hero_btn1_nl }}</a>
-      <button class="btn btn-g" onclick="go('project')" data-t="heroBtn2">{{ .Params.hero_btn2_nl }}</button>
+      <a href="/steenweg/" class="btn btn-w" data-t="heroBtn">{{ .Params.hero_btn_nl }}</a>
     </div>
   </div>
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
-<!-- RENDERS / PROJECT -->
-<section class="renders" id="project">
-  <div class="renders-in">
-    <div class="renders-hd">
-      <div class="renders-tag" data-t="rendersTag">{{ .Params.renders_tag_nl }}</div>
-      <h2 class="renders-t" data-t="rendersTitle">{{ .Params.renders_title_nl }}</h2>
-      <p class="renders-sub" data-t="rendersSub">{{ .Params.renders_text_nl }}</p>
-    </div>
-    <div class="renders-grid">
-      <div>
-        <div class="renders-img">
-          <picture>
-            <source srcset="/media/{{ .Params.render_image_2 }}" type="image/webp">
-            <img src="/media/render-aerial.png" alt="Watdajel — architectural render, aerial view" loading="lazy">
-          </picture>
-        </div>
-        <p class="renders-label" data-t="rendersLabel2">Bovenaanzicht met zonnepanelen</p>
-      </div>
-    </div>
+<!-- FLOOR PLAN -->
+<section class="plan">
+  <div class="plan-label">
+    <span class="plan-name">Het Nieuwe Watdajel</span>
+    <span class="plan-addr">Steenweg 42, Utrecht</span>
+  </div>
+  <div class="plan-img">
+    {{ if .Params.plan_image }}
+    <img src="/media/{{ .Params.plan_image }}" alt="Watdajel — plattegrond" loading="lazy">
+    {{ else }}
+    <span class="plan-ph">Plattegrond volgt binnenkort</span>
+    {{ end }}
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="intro" id="over-ons">
-  <div class="intro-in">
+<!-- FOTO STUDIO BLOCK -->
+<section class="studio" id="foto-studio-preview">
+  <div class="studio-in">
     <div>
-      <div class="intro-tag" data-t="introTag">{{ .Params.intro_tag_nl }}</div>
-      <h2 class="intro-t" data-t="introTitle">{{ .Params.intro_title_nl }}</h2>
-      <div class="intro-txt">
-        <p data-t="introP1">{{ .Params.intro_p1_nl }}</p>
-        <p data-t="introP2">{{ .Params.intro_p2_nl }}</p>
+      <div class="studio-tag">Foto Studio</div>
+      <h2 class="studio-t" data-t="studioTitle">{{ .Params.studio_title_nl }}</h2>
+      <div class="studio-lines">
+        <div class="studio-line"></div>
+        <div class="studio-line"></div>
+        <div class="studio-line"></div>
+      </div>
+      <a href="/foto-studio/" class="studio-btn" data-t="studioLink">{{ .Params.studio_link_nl }}</a>
+    </div>
+    <a href="/foto-studio/" class="studio-photo">
+      {{ if .Params.studio_image }}
+      <img src="/media/{{ .Params.studio_image }}" alt="Foto Studio — Watdajel" loading="lazy">
+      {{ else }}
+      <span class="studio-ph">Foto Studio — binnenkort</span>
+      {{ end }}
+    </a>
+  </div>
+</section>
+
+<!-- JESUS BLOCK -->
+<section class="jesus" id="over-ons">
+  <div class="jesus-in">
+    <div>
+      <div class="jesus-tag" data-t="aboutTag">{{ .Params.about_tag_nl }}</div>
+      <div class="jesus-lines">
+        <div class="jesus-line"></div>
+        <div class="jesus-line"></div>
+        <div class="jesus-line"></div>
+        <div class="jesus-line"></div>
+        <div class="jesus-line"></div>
+        <div class="jesus-line"></div>
       </div>
     </div>
-    {{ if .Params.intro_image }}
-    <div class="intro-img">
-      <picture>
-        <source srcset="/media/{{ .Params.intro_image }}" type="image/webp">
-        <img src="/media/jesus-portal.png" alt="Jesus Portal — Oprichter Watdajel" loading="lazy">
-      </picture>
+    <div>
+      <a href="/about/" class="jesus-photo">
+        {{ if .Params.about_image }}
+        <img src="/media/{{ .Params.about_image }}" alt="Jesus Portal — Oprichter Watdajel" loading="lazy">
+        {{ else }}
+        <span class="jesus-ph">Portret volgt binnenkort</span>
+        {{ end }}
+      </a>
+      <div class="jesus-cta">
+        <a href="/about/" data-t="aboutLink">{{ .Params.about_link_nl }}</a>
+      </div>
     </div>
-    {{ else }}
-    <div class="intro-img" style="background:var(--g100);display:flex;align-items:center;justify-content:center">
-      <span style="font-family:var(--sans);font-size:14px;color:var(--g600)">Foto volgt</span>
-    </div>
-    {{ end }}
   </div>
 </section>
 
@@ -287,249 +301,146 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
       <p class="sol-sub" data-t="solSub">{{ .Params.sol_sub_nl }}</p>
     </div>
     <div class="sol-grid">
-      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
-        <div class="sc-img">
-          {{ if .Params.card1_image }}<img src="/media/{{ .Params.card1_image }}" alt="" loading="lazy">{{ else }}<div style="width:100%;height:100%;background:var(--g100)"></div>{{ end }}
-        </div>
+      <a class="sc" href="/foto-studio/">
+        <div class="sc-img">{{ if .Params.card1_image }}<img src="/media/{{ .Params.card1_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
-          <h3 class="sc-t" data-t="card1Title">{{ .Params.card1_title_nl }}</h3>
-          <p class="sc-d" data-t="card1Desc">{{ .Params.card1_desc_nl }}</p>
-          <span class="sc-l"><span data-t="cardLink">{{ .Params.card_link_nl }}</span> →</span>
+          <h3 class="sc-t" data-t="c1t">{{ .Params.card1_title_nl }}</h3>
+          <p class="sc-d" data-t="c1d">{{ .Params.card1_desc_nl }}</p>
+          <span class="sc-l"><span data-t="cLink">{{ .Params.card_link_nl }}</span> →</span>
         </div>
       </a>
-      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
-        <div class="sc-img">
-          {{ if .Params.card2_image }}<img src="/media/{{ .Params.card2_image }}" alt="" loading="lazy">{{ else }}<div style="width:100%;height:100%;background:var(--g100)"></div>{{ end }}
-        </div>
+      <a class="sc" href="/foto-studio/">
+        <div class="sc-img">{{ if .Params.card2_image }}<img src="/media/{{ .Params.card2_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
-          <h3 class="sc-t" data-t="card2Title">{{ .Params.card2_title_nl }}</h3>
-          <p class="sc-d" data-t="card2Desc">{{ .Params.card2_desc_nl }}</p>
-          <span class="sc-l"><span data-t="cardLink">{{ .Params.card_link_nl }}</span> →</span>
+          <h3 class="sc-t" data-t="c2t">{{ .Params.card2_title_nl }}</h3>
+          <p class="sc-d" data-t="c2d">{{ .Params.card2_desc_nl }}</p>
+          <span class="sc-l"><span data-t="cLink">{{ .Params.card_link_nl }}</span> →</span>
         </div>
       </a>
-      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
-        <div class="sc-img">
-          {{ if .Params.card3_image }}<img src="/media/{{ .Params.card3_image }}" alt="" loading="lazy">{{ else }}<div style="width:100%;height:100%;background:var(--g100)"></div>{{ end }}
-        </div>
+      <a class="sc" href="/foto-studio/">
+        <div class="sc-img">{{ if .Params.card3_image }}<img src="/media/{{ .Params.card3_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
-          <h3 class="sc-t" data-t="card3Title">{{ .Params.card3_title_nl }}</h3>
-          <p class="sc-d" data-t="card3Desc">{{ .Params.card3_desc_nl }}</p>
-          <span class="sc-l"><span data-t="cardLink">{{ .Params.card_link_nl }}</span> →</span>
+          <h3 class="sc-t" data-t="c3t">{{ .Params.card3_title_nl }}</h3>
+          <p class="sc-d" data-t="c3d">{{ .Params.card3_desc_nl }}</p>
+          <span class="sc-l"><span data-t="cLink">{{ .Params.card_link_nl }}</span> →</span>
         </div>
       </a>
-      <a class="sc" href="#contact" onclick="event.preventDefault();go('contact')">
-        <div class="sc-img">
-          {{ if .Params.card4_image }}<img src="/media/{{ .Params.card4_image }}" alt="" loading="lazy">{{ else }}<div style="width:100%;height:100%;background:var(--g100)"></div>{{ end }}
-        </div>
+      <a class="sc" href="/foto-studio/">
+        <div class="sc-img">{{ if .Params.card4_image }}<img src="/media/{{ .Params.card4_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
-          <h3 class="sc-t" data-t="card4Title">{{ .Params.card4_title_nl }}</h3>
-          <p class="sc-d" data-t="card4Desc">{{ .Params.card4_desc_nl }}</p>
-          <span class="sc-l"><span data-t="cardLink">{{ .Params.card_link_nl }}</span> →</span>
+          <h3 class="sc-t" data-t="c4t">{{ .Params.card4_title_nl }}</h3>
+          <p class="sc-d" data-t="c4d">{{ .Params.card4_desc_nl }}</p>
+          <span class="sc-l"><span data-t="cLink">{{ .Params.card_link_nl }}</span> →</span>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- VISION -->
-<section class="vision">
-  <div class="vision-in">
-    <div class="vision-tag" data-t="visionTag">{{ .Params.vision_tag_nl }}</div>
-    <h2 class="vision-t" data-t="visionTitle"><em>{{ .Params.vision_title_nl }}</em></h2>
-    <div class="vision-txt">
-      <p data-t="visionP1">{{ .Params.vision_p1_nl }}</p>
-      <p data-t="visionP2">{{ .Params.vision_p2_nl }}</p>
+<!-- VERGADERING -->
+<section class="verg">
+  <div class="verg-in">
+    <div class="verg-label" data-t="vergLabel">Vergadering</div>
+    <h2 class="verg-t">Working in progress</h2>
+    <div class="verg-img">
+      <span class="verg-ph">Photo coming soon</span>
     </div>
-    <div class="vision-highlight" data-t="visionP3">{{ .Params.vision_p3_nl }}</div>
-    <div class="vision-txt">
-      <p data-t="visionP4">{{ .Params.vision_p4_nl }}</p>
-    </div>
-  </div>
-</section>
-
-<!-- HISTORIE -->
-<section class="historie">
-  <div class="historie-in">
-    <div class="historie-hd">
-      <div class="historie-tag" data-t="historieTag">{{ .Params.historie_tag_nl }}</div>
-      <h2 class="historie-t" data-t="historieTitle">{{ .Params.historie_title_nl }}</h2>
-      <p class="historie-intro" data-t="historieIntro">{{ .Params.historie_intro_nl }}</p>
-    </div>
-    <div class="tl">
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2011</div>
-        <div class="tl-text" data-t="historie2011">{{ .Params.historie_2011_nl }}</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2015</div>
-        <div class="tl-text" data-t="historie2015">{{ .Params.historie_2015_nl }}</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2018</div>
-        <div class="tl-text" data-t="historie2018">{{ .Params.historie_2018_nl }}</div>
-      </div>
-      <div class="tl-item">
-        <div class="tl-dot"></div>
-        <div class="tl-year">2021</div>
-        <div class="tl-text" data-t="historie2021">{{ .Params.historie_2021_nl }}</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta" id="contact">
-  <div class="cta-in">
-    <h2 class="cta-t" data-t="ctaTitle">{{ .Params.cta_title_nl }}</h2>
-    <p class="cta-p" data-t="ctaText">{{ .Params.cta_text_nl }}</p>
-    <p class="cta-email"><a href="mailto:info@watdajel.com">info@watdajel.com</a></p>
-    <a href="mailto:info@watdajel.com" class="cta-btn" data-t="ctaBtn">{{ .Params.cta_btn_nl }}</a>
+    <div class="verg-next">Next project</div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="ft">
+<footer class="ft" id="contact">
   <div class="ft-in">
     <div>
       <div class="ft-brand">Watdajel</div>
-      <p data-t="footerDesc">{{ .Params.footer_desc_nl }}</p>
+      <p data-t="ftDesc">{{ .Params.footer_desc_nl }}</p>
       <div class="ft-social">
+        <!-- LinkedIn: active link -->
         <a href="https://linkedin.com/company/watdajel" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.12-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zM.02 24h4.96V7.99H.02V24zM8.48 7.99h4.74v2.19h.07c.66-1.25 2.27-2.57 4.67-2.57C22.95 7.61 24 11.26 24 16.05V24h-4.96v-7.05c0-1.68-.03-3.84-2.34-3.84-2.34 0-2.7 1.83-2.7 3.72V24H8.48V7.99z"/></svg></a>
-        <a href="https://www.facebook.com/watdajel.art" target="_blank" rel="noopener noreferrer" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-        <a href="https://www.instagram.com/watdajel_festival/" target="_blank" rel="noopener noreferrer" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
-        <a href="https://x.com/watdajel" target="_blank" rel="noopener noreferrer" title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
-        <a href="https://www.youtube.com/channel/UC0HMw_EKYSx_-ttwN5oz0_w" target="_blank" rel="noopener noreferrer" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <!-- Facebook: icon only, unlinked -->
+        <span title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
+        <!-- Instagram: icon only, unlinked -->
+        <span title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></span>
+        <!-- X: icon only, unlinked -->
+        <span title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
+        <!-- YouTube: icon only, unlinked -->
+        <span title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
       </div>
     </div>
     <div>
-      <h4 data-t="footerPages">{{ .Params.footer_pages_nl }}</h4>
+      <h4 data-t="ftPages">{{ .Params.footer_pages_nl }}</h4>
       <ul>
-        <li><a href="#welkom" data-t="nav0">{{ .Params.nav_0_nl }}</a></li>
-        <li><a href="#project" data-t="nav1">{{ .Params.nav_1_nl }}</a></li>
-        <li><a href="#workspaces" data-t="nav2">{{ .Params.nav_2_nl }}</a></li>
-        <li><a href="#over-ons" data-t="nav3">{{ .Params.nav_3_nl }}</a></li>
-        <li><a href="#contact" data-t="nav4">{{ .Params.nav_4_nl }}</a></li>
+        <li><a href="#welkom" data-t="navWelcome">{{ .Params.nav_welcome_nl }}</a></li>
+        <li><a href="/steenweg/">Steenweg</a></li>
+        <li><a href="/foto-studio/">Foto Studio</a></li>
+        <li><a href="#workspaces" data-t="navWork">{{ .Params.nav_work_nl }}</a></li>
+        <li><a href="/about/" data-t="navAbout">{{ .Params.nav_about_nl }}</a></li>
+        <li><a href="#contact" data-t="navContact">{{ .Params.nav_contact_nl }}</a></li>
       </ul>
     </div>
     <div>
-      <h4 data-t="footerMore">{{ .Params.footer_more_nl }}</h4>
+      <h4>Contact</h4>
       <ul>
-        <li><a href="#over-ons" data-t="footerVision">{{ .Params.footer_vision_nl }}</a></li>
-        <li><a href="#over-ons" data-t="footerSustain">{{ .Params.footer_sustain_nl }}</a></li>
-        <li><a href="https://watdajelfestival.com" target="_blank" rel="noopener noreferrer" data-t="footerHistory">{{ .Params.footer_history_nl }}</a></li>
-        <li><a href="#" data-t="footerPrivacy">{{ .Params.footer_privacy_nl }}</a></li>
+        <li><a href="mailto:info@watdajel.com">info@watdajel.com</a></li>
+        <li><a href="mailto:verhuur@watdajel.com">verhuur@watdajel.com</a></li>
+        <li><a href="/steenweg/">Steenweg 42, Utrecht</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-bot">
-    <span>&copy; 2026 Watdajel — Creative & Sustainable Workspaces</span>
-    <span data-t="footerRights">{{ .Params.footer_rights_nl }}</span>
+    <span>&copy; 2026 Watdajel — Creative & Sustainable Spaces</span>
+    <span data-t="ftRights">{{ .Params.footer_rights_nl }}</span>
   </div>
 </footer>
 
 <script>
-/* ─── Translations generated from Hugo frontmatter ─── */
+var lang="nl";
 var T={
   nl:{
-    heroTag:"{{ .Params.hero_tag }}",
-    heroTitle1:"{{ .Params.hero_title_1_nl }}",heroTitle2:"{{ .Params.hero_title_2_nl }}",
-    heroSub:"{{ .Params.hero_sub_nl }}",
-    heroBtn1:"{{ .Params.hero_btn1_nl }}",heroBtn2:"{{ .Params.hero_btn2_nl }}",
-    rendersTag:"{{ .Params.renders_tag_nl }}",rendersTitle:"{{ .Params.renders_title_nl }}",rendersSub:"{{ .Params.renders_text_nl }}",
-    rendersLabel1:"Steenweg — straatzijde",rendersLabel2:"Bovenaanzicht met zonnepanelen",
-    introTag:"{{ .Params.intro_tag_nl }}",introTitle:"{{ .Params.intro_title_nl }}",
-    introP1:"{{ .Params.intro_p1_nl }}",introP2:"{{ .Params.intro_p2_nl }}",
+    heroTitle:"{{ .Params.hero_title_nl }}",heroBtn:"{{ .Params.hero_btn_nl }}",
+    studioTitle:"{{ .Params.studio_title_nl }}",studioLink:"{{ .Params.studio_link_nl }}",
+    aboutTag:"{{ .Params.about_tag_nl }}",aboutLink:"{{ .Params.about_link_nl }}",
     solTag:"{{ .Params.sol_tag_nl }}",solTitle:"{{ .Params.sol_title_nl }}",solSub:"{{ .Params.sol_sub_nl }}",
-    card1Title:"{{ .Params.card1_title_nl }}",card1Desc:"{{ .Params.card1_desc_nl }}",
-    card2Title:"{{ .Params.card2_title_nl }}",card2Desc:"{{ .Params.card2_desc_nl }}",
-    card3Title:"{{ .Params.card3_title_nl }}",card3Desc:"{{ .Params.card3_desc_nl }}",
-    card4Title:"{{ .Params.card4_title_nl }}",card4Desc:"{{ .Params.card4_desc_nl }}",
-    cardLink:"{{ .Params.card_link_nl }}",
-    visionTag:"{{ .Params.vision_tag_nl }}",visionTitle:"{{ .Params.vision_title_nl }}",
-    visionP1:"{{ .Params.vision_p1_nl }}",visionP2:"{{ .Params.vision_p2_nl }}",
-    visionP3:"{{ .Params.vision_p3_nl }}",visionP4:"{{ .Params.vision_p4_nl }}",
-    historieTag:"{{ .Params.historie_tag_nl }}",historieTitle:"{{ .Params.historie_title_nl }}",
-    historieIntro:"{{ .Params.historie_intro_nl }}",
-    historie2011:"{{ .Params.historie_2011_nl }}",historie2015:"{{ .Params.historie_2015_nl }}",
-    historie2018:"{{ .Params.historie_2018_nl }}",historie2021:"{{ .Params.historie_2021_nl }}",
-    ctaTitle:"{{ .Params.cta_title_nl }}",ctaText:"{{ .Params.cta_text_nl }}",ctaBtn:"{{ .Params.cta_btn_nl }}",
-    footerDesc:"{{ .Params.footer_desc_nl }}",footerPages:"{{ .Params.footer_pages_nl }}",
-    footerMore:"{{ .Params.footer_more_nl }}",footerVision:"{{ .Params.footer_vision_nl }}",
-    footerSustain:"{{ .Params.footer_sustain_nl }}",footerHistory:"{{ .Params.footer_history_nl }}",
-    footerPrivacy:"{{ .Params.footer_privacy_nl }}",footerRights:"{{ .Params.footer_rights_nl }}",
-    nav0:"{{ .Params.nav_0_nl }}",nav1:"{{ .Params.nav_1_nl }}",nav2:"{{ .Params.nav_2_nl }}",
-    nav3:"{{ .Params.nav_3_nl }}",nav4:"{{ .Params.nav_4_nl }}",
-    navCta:"{{ .Params.nav_cta_nl }}",navCtaArrow:"{{ .Params.nav_cta_nl }} →",
-    langSwitch:"{{ .Params.lang_switch_nl }}"
+    c1t:"{{ .Params.card1_title_nl }}",c1d:"{{ .Params.card1_desc_nl }}",
+    c2t:"{{ .Params.card2_title_nl }}",c2d:"{{ .Params.card2_desc_nl }}",
+    c3t:"{{ .Params.card3_title_nl }}",c3d:"{{ .Params.card3_desc_nl }}",
+    c4t:"{{ .Params.card4_title_nl }}",c4d:"{{ .Params.card4_desc_nl }}",
+    cLink:"{{ .Params.card_link_nl }}",
+    vergLabel:"Vergadering",
+    ftDesc:"{{ .Params.footer_desc_nl }}",ftPages:"{{ .Params.footer_pages_nl }}",ftRights:"{{ .Params.footer_rights_nl }}",
+    navWelcome:"{{ .Params.nav_welcome_nl }}",navWork:"{{ .Params.nav_work_nl }}",
+    navAbout:"{{ .Params.nav_about_nl }}",navContact:"{{ .Params.nav_contact_nl }}",
+    navCta:"{{ .Params.nav_cta_nl }}",langSwitch:"{{ .Params.lang_switch_nl }}"
   },
   en:{
-    heroTag:"{{ .Params.hero_tag }}",
-    heroTitle1:"{{ .Params.hero_title_1_en }}",heroTitle2:"{{ .Params.hero_title_2_en }}",
-    heroSub:"{{ .Params.hero_sub_en }}",
-    heroBtn1:"{{ .Params.hero_btn1_en }}",heroBtn2:"{{ .Params.hero_btn2_en }}",
-    rendersTag:"{{ .Params.renders_tag_en }}",rendersTitle:"{{ .Params.renders_title_en }}",rendersSub:"{{ .Params.renders_text_en }}",
-    rendersLabel1:"Steenweg — street side",rendersLabel2:"Aerial view with solar panels",
-    introTag:"{{ .Params.intro_tag_en }}",introTitle:"{{ .Params.intro_title_en }}",
-    introP1:"{{ .Params.intro_p1_en }}",introP2:"{{ .Params.intro_p2_en }}",
+    heroTitle:"{{ .Params.hero_title_en }}",heroBtn:"{{ .Params.hero_btn_en }}",
+    studioTitle:"{{ .Params.studio_title_en }}",studioLink:"{{ .Params.studio_link_en }}",
+    aboutTag:"{{ .Params.about_tag_en }}",aboutLink:"{{ .Params.about_link_en }}",
     solTag:"{{ .Params.sol_tag_en }}",solTitle:"{{ .Params.sol_title_en }}",solSub:"{{ .Params.sol_sub_en }}",
-    card1Title:"{{ .Params.card1_title_en }}",card1Desc:"{{ .Params.card1_desc_en }}",
-    card2Title:"{{ .Params.card2_title_en }}",card2Desc:"{{ .Params.card2_desc_en }}",
-    card3Title:"{{ .Params.card3_title_en }}",card3Desc:"{{ .Params.card3_desc_en }}",
-    card4Title:"{{ .Params.card4_title_en }}",card4Desc:"{{ .Params.card4_desc_en }}",
-    cardLink:"{{ .Params.card_link_en }}",
-    visionTag:"{{ .Params.vision_tag_en }}",visionTitle:"{{ .Params.vision_title_en }}",
-    visionP1:"{{ .Params.vision_p1_en }}",visionP2:"{{ .Params.vision_p2_en }}",
-    visionP3:"{{ .Params.vision_p3_en }}",visionP4:"{{ .Params.vision_p4_en }}",
-    historieTag:"{{ .Params.historie_tag_en }}",historieTitle:"{{ .Params.historie_title_en }}",
-    historieIntro:"{{ .Params.historie_intro_en }}",
-    historie2011:"{{ .Params.historie_2011_en }}",historie2015:"{{ .Params.historie_2015_en }}",
-    historie2018:"{{ .Params.historie_2018_en }}",historie2021:"{{ .Params.historie_2021_en }}",
-    ctaTitle:"{{ .Params.cta_title_en }}",ctaText:"{{ .Params.cta_text_en }}",ctaBtn:"{{ .Params.cta_btn_en }}",
-    footerDesc:"{{ .Params.footer_desc_en }}",footerPages:"{{ .Params.footer_pages_en }}",
-    footerMore:"{{ .Params.footer_more_en }}",footerVision:"{{ .Params.footer_vision_en }}",
-    footerSustain:"{{ .Params.footer_sustain_en }}",footerHistory:"{{ .Params.footer_history_en }}",
-    footerPrivacy:"{{ .Params.footer_privacy_en }}",footerRights:"{{ .Params.footer_rights_en }}",
-    nav0:"{{ .Params.nav_0_en }}",nav1:"{{ .Params.nav_1_en }}",nav2:"{{ .Params.nav_2_en }}",
-    nav3:"{{ .Params.nav_3_en }}",nav4:"{{ .Params.nav_4_en }}",
-    navCta:"{{ .Params.nav_cta_en }}",navCtaArrow:"{{ .Params.nav_cta_en }} →",
-    langSwitch:"{{ .Params.lang_switch_en }}"
+    c1t:"{{ .Params.card1_title_en }}",c1d:"{{ .Params.card1_desc_en }}",
+    c2t:"{{ .Params.card2_title_en }}",c2d:"{{ .Params.card2_desc_en }}",
+    c3t:"{{ .Params.card3_title_en }}",c3d:"{{ .Params.card3_desc_en }}",
+    c4t:"{{ .Params.card4_title_en }}",c4d:"{{ .Params.card4_desc_en }}",
+    cLink:"{{ .Params.card_link_en }}",
+    vergLabel:"Meeting",
+    ftDesc:"{{ .Params.footer_desc_en }}",ftPages:"{{ .Params.footer_pages_en }}",ftRights:"{{ .Params.footer_rights_en }}",
+    navWelcome:"{{ .Params.nav_welcome_en }}",navWork:"{{ .Params.nav_work_en }}",
+    navAbout:"{{ .Params.nav_about_en }}",navContact:"{{ .Params.nav_contact_en }}",
+    navCta:"{{ .Params.nav_cta_en }}",langSwitch:"{{ .Params.lang_switch_en }}"
   }
 };
-
-var lang="nl";
-
-/* ─── Nav scroll ─── */
-window.addEventListener("scroll",function(){
-  var nav=document.getElementById("nav");
-  if(window.scrollY>60){nav.className="n n--s"}else{nav.className="n n--t"}
-});
-
-/* ─── Navigation ─── */
-function go(id){
-  document.getElementById("mm").classList.remove("open");
-  document.getElementById("burger").classList.remove("open");
-  document.getElementById(id).scrollIntoView({behavior:"smooth"});
-}
-
-/* ─── Mobile menu ─── */
-function toggleMenu(){
-  document.getElementById("mm").classList.toggle("open");
-  document.getElementById("burger").classList.toggle("open");
-}
-
-/* ─── Language toggle ─── */
-function toggleLang(){
-  lang=lang==="nl"?"en":"nl";
+function applyLang(){
+  document.querySelectorAll("[data-t]").forEach(function(el){
+    var k=el.getAttribute("data-t");if(T[lang][k]!==undefined)el.textContent=T[lang][k];
+  });
   document.getElementById("langBtn").textContent=lang==="nl"?"EN":"NL";
   document.documentElement.lang=lang;
-  document.querySelectorAll("[data-t]").forEach(function(el){
-    var key=el.getAttribute("data-t");
-    if(T[lang][key]!==undefined) el.textContent=T[lang][key];
-  });
 }
+function toggleLang(){lang=lang==="nl"?"en":"nl";applyLang();}
+function toggleMenu(){document.getElementById("mm").classList.toggle("open");document.getElementById("burger").classList.toggle("open");}
+function closeMM(){document.getElementById("mm").classList.remove("open");document.getElementById("burger").classList.remove("open");}
+window.addEventListener("scroll",function(){document.getElementById("nav").className=window.scrollY>60?"n n--s":"n n--t";});
 </script>
 </body>
 </html>
