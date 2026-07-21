@@ -79,8 +79,8 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .stw-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
 .stw-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);border:none;cursor:pointer;transition:background .3s}
 .stw-dot.active{background:rgba(255,255,255,.9)}
-.stw-logos{max-width:1320px;margin:0 auto;padding:40px 48px;display:flex;justify-content:center;overflow:hidden;background:var(--white)}
-.stw-logos img{height:48px;width:auto;max-width:90%;opacity:.7}
+
+
 .stw-content{max-width:1320px;margin:0 auto;padding:0 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
 .stw-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px}
 .stw-headline{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:24px}
@@ -243,9 +243,6 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
       <button class="stw-dot active" onclick="stwSlide(0)"></button>
       <button class="stw-dot" onclick="stwSlide(1)"></button>
     </div>
-  </div>
-  <div class="stw-logos">
-    <img src="/media/{{ .Params.steenweg_logos }}" alt="Partners" loading="lazy">
   </div>
   <div class="stw-content">
     <div>
