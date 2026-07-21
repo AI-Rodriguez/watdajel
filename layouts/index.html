@@ -71,16 +71,24 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .scroll-line{width:1px;height:40px;background:rgba(255,255,255,.25);position:relative;overflow:hidden}
 .scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:1px;height:100%;background:var(--white);animation:sd 2s ease-in-out infinite}
 
-/* ── FLOOR PLAN ── */
-.plan{width:100%;background:var(--white);padding:40px 0 0}
-.plan-label{max-width:1320px;margin:0 auto;padding:0 48px 40px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center}
-.plan-name{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:700;color:var(--charcoal);letter-spacing:-.02em}
-.plan-addr{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--g600);letter-spacing:.5px}
-.plan-btn{font-family:var(--sans);font-size:14px;font-weight:600;padding:13px 30px;border-radius:var(--pill);border:1.5px solid var(--charcoal);color:var(--charcoal);text-decoration:none;display:inline-block;transition:all .3s;margin-top:8px}
-.plan-btn:hover{background:var(--charcoal);color:var(--white)}
-.plan-img{width:100%;overflow:hidden;background:var(--g100)}
-.plan-img img{width:100%;height:auto;display:block}
-.plan-ph{font-family:var(--serif);font-size:18px;color:var(--g400);font-style:italic}
+/* ── STEENWEG ── */
+.stw{width:100%;background:var(--white);padding:0}
+.stw-carousel{position:relative;width:100%;aspect-ratio:16/7;overflow:hidden;background:var(--g100)}
+.stw-carousel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1s ease}
+.stw-carousel img.active{opacity:1}
+.stw-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
+.stw-dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);border:none;cursor:pointer;transition:background .3s}
+.stw-dot.active{background:rgba(255,255,255,.9)}
+.stw-logos{max-width:1320px;margin:0 auto;padding:40px 48px;display:flex;justify-content:center}
+.stw-logos img{max-height:48px;width:auto;opacity:.7}
+.stw-content{max-width:1320px;margin:0 auto;padding:0 48px 80px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.stw-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px}
+.stw-headline{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:24px}
+.stw-text{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--g600);margin-bottom:32px}
+.stw-btn{font-family:var(--sans);font-size:14px;font-weight:600;padding:13px 30px;border-radius:50px;border:1.5px solid var(--charcoal);color:var(--charcoal);text-decoration:none;display:inline-block;transition:all .3s}
+.stw-btn:hover{background:var(--charcoal);color:var(--white)}
+.stw-photo{width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--g100)}
+.stw-photo img{width:100%;height:100%;object-fit:cover;display:block}
 
 /* ── FOTO STUDIO BLOCK ── */
 .studio{padding:100px 48px;background:var(--white)}
@@ -171,7 +179,7 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 }
 @media(max-width:640px){
   .n-i{padding:0 24px}.hero-c{padding:0 24px 72px}
-  .plan-label{padding:0 24px 24px}
+  
   .studio,.jesus,.sol,.verg,.ft{padding-left:24px;padding-right:24px}
   .hero-h{font-size:22px}
   .mm{padding:24px}.mm a,.mm button{font-size:26px}
@@ -226,19 +234,29 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
   <div class="hero-scroll"><span>Scroll</span><div class="scroll-line"></div></div>
 </section>
 
-<!-- FLOOR PLAN -->
-<section class="plan">
-  <div class="plan-label">
-    <span class="plan-name">Het Nieuwe Watdajel</span>
-    <span class="plan-addr">Steenweg 42, Utrecht</span>
-    <a href="/steenweg/" class="plan-btn" data-t="planBtn">{{ .Params.plan_btn_nl }}</a>
+<!-- STEENWEG -->
+<section class="stw" id="steenweg">
+  <div class="stw-carousel" id="stwCarousel">
+    <img src="/media/{{ .Params.steenweg_image_1 }}" alt="Steenweg render" class="active">
+    <img src="/media/{{ .Params.steenweg_image_2 }}" alt="Steenweg zaal" loading="lazy">
+    <div class="stw-dots">
+      <button class="stw-dot active" onclick="stwSlide(0)"></button>
+      <button class="stw-dot" onclick="stwSlide(1)"></button>
+    </div>
   </div>
-  <div class="plan-img">
-    {{ if .Params.plan_image }}
-    <img src="/media/{{ .Params.plan_image }}" alt="Watdajel — plattegrond" loading="lazy">
-    {{ else }}
-    <span class="plan-ph">Plattegrond volgt binnenkort</span>
-    {{ end }}
+  <div class="stw-logos">
+    <img src="/media/{{ .Params.steenweg_logos }}" alt="Partners" loading="lazy">
+  </div>
+  <div class="stw-content">
+    <div>
+      <div class="stw-tag">Watdajel Opening</div>
+      <h2 class="stw-headline" data-t="stwHeadline">{{ .Params.steenweg_headline_nl }}</h2>
+      <p class="stw-text" data-t="stwText">{{ .Params.steenweg_text_nl }}</p>
+      <a href="/steenweg/" class="stw-btn" data-t="planBtn">{{ .Params.plan_btn_nl }}</a>
+    </div>
+    <div class="stw-photo">
+      <img src="/media/{{ .Params.steenweg_photo }}" alt="Steenweg — Watdajel" loading="lazy">
+    </div>
   </div>
 </section>
 
@@ -389,7 +407,7 @@ var lang="nl";
 var T={
   nl:{
     heroTitle:"{{ .Params.hero_title_nl }}",heroBtn:"{{ .Params.hero_btn_nl }}",
-    planBtn:"{{ .Params.plan_btn_nl }}",
+    planBtn:"{{ .Params.plan_btn_nl }}",stwHeadline:"{{ .Params.steenweg_headline_nl }}",stwText:"{{ .Params.steenweg_text_nl }}",
     studioTitle:"{{ .Params.studio_title_nl }}",studioLink:"{{ .Params.studio_link_nl }}",studioText:"{{ .Params.studio_text_nl }}",
     aboutTag:"{{ .Params.about_tag_nl }}",aboutLink:"{{ .Params.about_link_nl }}",aboutHeadline:"{{ .Params.about_headline_nl }}",aboutText:"{{ .Params.about_text_nl }}",
     solTag:"{{ .Params.sol_tag_nl }}",solTitle:"{{ .Params.sol_title_nl }}",solSub:"{{ .Params.sol_sub_nl }}",
@@ -406,7 +424,7 @@ var T={
   },
   en:{
     heroTitle:"{{ .Params.hero_title_en }}",heroBtn:"{{ .Params.hero_btn_en }}",
-    planBtn:"{{ .Params.plan_btn_en }}",
+    planBtn:"{{ .Params.plan_btn_en }}",stwHeadline:"{{ .Params.steenweg_headline_en }}",stwText:"{{ .Params.steenweg_text_en }}",
     studioTitle:"{{ .Params.studio_title_en }}",studioLink:"{{ .Params.studio_link_en }}",studioText:"{{ .Params.studio_text_en }}",
     aboutTag:"{{ .Params.about_tag_en }}",aboutLink:"{{ .Params.about_link_en }}",aboutHeadline:"{{ .Params.about_headline_en }}",aboutText:"{{ .Params.about_text_en }}",
     solTag:"{{ .Params.sol_tag_en }}",solTitle:"{{ .Params.sol_title_en }}",solSub:"{{ .Params.sol_sub_en }}",
@@ -433,6 +451,11 @@ function toggleLang(){lang=lang==="nl"?"en":"nl";applyLang();}
 function toggleMenu(){document.getElementById("mm").classList.toggle("open");document.getElementById("burger").classList.toggle("open");}
 function closeMM(){document.getElementById("mm").classList.remove("open");document.getElementById("burger").classList.remove("open");}
 window.addEventListener("scroll",function(){document.getElementById("nav").className=window.scrollY>60?"n n--s":"n n--t";});
+
+/* Steenweg carousel */
+var stwIdx=0,stwImgs=document.querySelectorAll("#stwCarousel>img"),stwDots=document.querySelectorAll(".stw-dot");
+function stwSlide(n){stwImgs[stwIdx].classList.remove("active");stwDots[stwIdx].classList.remove("active");stwIdx=n;stwImgs[stwIdx].classList.add("active");stwDots[stwIdx].classList.add("active");}
+setInterval(function(){stwSlide((stwIdx+1)%stwImgs.length)},4000);
 </script>
 </body>
 </html>
