@@ -88,7 +88,6 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .studio-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px}
 .studio-t{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:32px}
 .studio-lines{display:flex;flex-direction:column;gap:12px;margin-bottom:36px}
-.studio-line{background:var(--g100);border-radius:4px;height:14px}
 .studio-line:nth-child(1){width:90%}.studio-line:nth-child(2){width:75%}.studio-line:nth-child(3){width:82%}
 .studio-btn{font-family:var(--sans);font-size:14px;font-weight:600;color:var(--charcoal);text-decoration:none;display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:var(--pill);border:1.5px solid var(--charcoal);transition:all .3s}
 .studio-btn:hover{background:var(--charcoal);color:var(--white)}
@@ -101,10 +100,8 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .jesus{padding:100px 48px;background:var(--warm)}
 .jesus-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
 .jesus-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:24px}
-.jesus-lines{display:flex;flex-direction:column;gap:12px}
-.jesus-line{background:var(--g200);border-radius:4px;height:14px}
-.jesus-line:nth-child(1){width:88%}.jesus-line:nth-child(2){width:72%}.jesus-line:nth-child(3){width:80%}
-.jesus-line:nth-child(4){width:65%}.jesus-line:nth-child(5){width:78%}.jesus-line:nth-child(6){width:55%}
+.jesus-headline{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:500;font-style:italic;color:var(--charcoal);line-height:1.3;letter-spacing:-.01em;margin-bottom:24px}
+.jesus-text{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--g600)}
 .jesus-photo{width:100%;aspect-ratio:3/4;border-radius:12px;overflow:hidden;background:var(--g100);display:flex;align-items:center;justify-content:center;text-decoration:none}
 .jesus-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .jesus-ph{font-family:var(--serif);font-size:16px;color:var(--g400);font-style:italic;text-align:center;padding:24px}
@@ -145,6 +142,8 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .ft{background:var(--black);color:rgba(255,255,255,.5);padding:64px 48px 32px}
 .ft-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
 .ft-brand{font-family:var(--serif);font-size:24px;font-weight:700;color:var(--white);margin-bottom:12px}
+.ft-legal{font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.5);line-height:1.8;margin:0}
+.ft-label{font-family:var(--sans);font-size:12px;color:rgba(255,255,255,.4);margin-top:12px;font-style:italic}
 .ft p{font-family:var(--sans);font-size:14px;line-height:1.7;margin-bottom:20px}
 .ft-social{display:flex;gap:10px;margin-top:4px}
 .ft-social a,.ft-social span{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;transition:all .3s}
@@ -249,11 +248,7 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
     <div>
       <div class="studio-tag">Foto Studio</div>
       <h2 class="studio-t" data-t="studioTitle">{{ .Params.studio_title_nl }}</h2>
-      <div class="studio-lines">
-        <div class="studio-line"></div>
-        <div class="studio-line"></div>
-        <div class="studio-line"></div>
-      </div>
+      <p class="studio-text" data-t="studioText">{{ .Params.studio_text_nl }}</p>
       <a href="/foto-studio/" class="studio-btn" data-t="studioLink">{{ .Params.studio_link_nl }}</a>
     </div>
     <a href="/foto-studio/" class="studio-photo">
@@ -271,14 +266,8 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
   <div class="jesus-in">
     <div>
       <div class="jesus-tag" data-t="aboutTag">{{ .Params.about_tag_nl }}</div>
-      <div class="jesus-lines">
-        <div class="jesus-line"></div>
-        <div class="jesus-line"></div>
-        <div class="jesus-line"></div>
-        <div class="jesus-line"></div>
-        <div class="jesus-line"></div>
-        <div class="jesus-line"></div>
-      </div>
+      <h2 class="jesus-headline" data-t="aboutHeadline">{{ .Params.about_headline_nl }}</h2>
+      <p class="jesus-text" data-t="aboutText">{{ .Params.about_text_nl }}</p>
     </div>
     <div>
       <a href="/about/" class="jesus-photo">
@@ -295,7 +284,7 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
   </div>
 </section>
 
-<!-- SOLUTIONS -->
+<!-- SOLUTIONS
 <section class="sol" id="workspaces">
   <div class="sol-in">
     <div class="sol-hd">
@@ -357,18 +346,14 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
   <div class="ft-in">
     <div>
       <div class="ft-brand">Watdajel</div>
-      <p data-t="ftDesc">{{ .Params.footer_desc_nl }}</p>
+      <p class="ft-legal">Watdajel Creative & Sustainable B.V.</p>
+      <p class="ft-legal">Donkerstraat 9 / 3511 KB Utrecht</p>
+      <p class="ft-legal">KVK 97876909</p>
+      <p class="ft-legal">BTW: NL868271214B01</p>
       <div class="ft-social">
-        <!-- LinkedIn: active link -->
+        <a href="https://instagram.com/watdajel_festival" target="_blank" rel="noopener noreferrer" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
         <a href="https://linkedin.com/company/watdajel" target="_blank" rel="noopener noreferrer" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.12-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zM.02 24h4.96V7.99H.02V24zM8.48 7.99h4.74v2.19h.07c.66-1.25 2.27-2.57 4.67-2.57C22.95 7.61 24 11.26 24 16.05V24h-4.96v-7.05c0-1.68-.03-3.84-2.34-3.84-2.34 0-2.7 1.83-2.7 3.72V24H8.48V7.99z"/></svg></a>
-        <!-- Facebook: icon only, unlinked -->
-        <span title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span>
-        <!-- Instagram: icon only, unlinked -->
-        <span title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></span>
-        <!-- X: icon only, unlinked -->
-        <span title="X"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>
-        <!-- YouTube: icon only, unlinked -->
-        <span title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></span>
+        <a href="https://youtube.com/channel/UC0HMw_EKYSx_-ttwN5oz0_w" target="_blank" rel="noopener noreferrer" title="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
       </div>
     </div>
     <div>
@@ -383,17 +368,19 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
       </ul>
     </div>
     <div>
-      <h4>Contact</h4>
+      <h4>Watdajel Creative & Sustainable</h4>
       <ul>
+        <li class="ft-label">Algemene informatie:</li>
         <li><a href="mailto:info@watdajel.com">info@watdajel.com</a></li>
+        <li class="ft-label">Informatie kantoor / verhuur:</li>
         <li><a href="mailto:verhuur@watdajel.com">verhuur@watdajel.com</a></li>
-        <li><a href="/steenweg/">Steenweg 42, Utrecht</a></li>
+        <li class="ft-label">Tel:</li>
+        <li><a href="tel:+31647397400">+31 6 47397400</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-bot">
-    <span>&copy; 2026 Watdajel — Creative & Sustainable Spaces</span>
-    <span data-t="ftRights">{{ .Params.footer_rights_nl }}</span>
+    <span>&copy;2026 WATDAJEL CREATIVE & SUSTAINABLE B.V. - THE NETHERLANDS All rights reserved.</span>
   </div>
 </footer>
 
@@ -403,8 +390,8 @@ var T={
   nl:{
     heroTitle:"{{ .Params.hero_title_nl }}",heroBtn:"{{ .Params.hero_btn_nl }}",
     planBtn:"{{ .Params.plan_btn_nl }}",
-    studioTitle:"{{ .Params.studio_title_nl }}",studioLink:"{{ .Params.studio_link_nl }}",
-    aboutTag:"{{ .Params.about_tag_nl }}",aboutLink:"{{ .Params.about_link_nl }}",
+    studioTitle:"{{ .Params.studio_title_nl }}",studioLink:"{{ .Params.studio_link_nl }}",studioText:"{{ .Params.studio_text_nl }}",
+    aboutTag:"{{ .Params.about_tag_nl }}",aboutLink:"{{ .Params.about_link_nl }}",aboutHeadline:"{{ .Params.about_headline_nl }}",aboutText:"{{ .Params.about_text_nl }}",
     solTag:"{{ .Params.sol_tag_nl }}",solTitle:"{{ .Params.sol_title_nl }}",solSub:"{{ .Params.sol_sub_nl }}",
     c1t:"{{ .Params.card1_title_nl }}",c1d:"{{ .Params.card1_desc_nl }}",
     c2t:"{{ .Params.card2_title_nl }}",c2d:"{{ .Params.card2_desc_nl }}",
@@ -420,8 +407,8 @@ var T={
   en:{
     heroTitle:"{{ .Params.hero_title_en }}",heroBtn:"{{ .Params.hero_btn_en }}",
     planBtn:"{{ .Params.plan_btn_en }}",
-    studioTitle:"{{ .Params.studio_title_en }}",studioLink:"{{ .Params.studio_link_en }}",
-    aboutTag:"{{ .Params.about_tag_en }}",aboutLink:"{{ .Params.about_link_en }}",
+    studioTitle:"{{ .Params.studio_title_en }}",studioLink:"{{ .Params.studio_link_en }}",studioText:"{{ .Params.studio_text_en }}",
+    aboutTag:"{{ .Params.about_tag_en }}",aboutLink:"{{ .Params.about_link_en }}",aboutHeadline:"{{ .Params.about_headline_en }}",aboutText:"{{ .Params.about_text_en }}",
     solTag:"{{ .Params.sol_tag_en }}",solTitle:"{{ .Params.sol_title_en }}",solSub:"{{ .Params.sol_sub_en }}",
     c1t:"{{ .Params.card1_title_en }}",c1d:"{{ .Params.card1_desc_en }}",
     c2t:"{{ .Params.card2_title_en }}",c2d:"{{ .Params.card2_desc_en }}",

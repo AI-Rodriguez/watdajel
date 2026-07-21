@@ -12,10 +12,12 @@ plan_btn_nl: "Informatie"
 plan_btn_en: "Information"
 
 # ─── FOTO STUDIO ───
-studio_title_nl: "Binnenkort beschikbaar"
-studio_title_en: "Coming soon"
+studio_title_nl: "Foto Studio Pop-Up Amsterdam"
+studio_title_en: "Pop-Up Photo Studio Amsterdam"
 studio_link_nl: "Ontdek de studio →"
 studio_link_en: "Discover the studio →"
+studio_text_nl: "Watdajel lanceert een nieuwe Foto Studio Pop-Up in het centrum van Amsterdam: Studio Spuin. Studio Spuin is een unieke daglichtstudio, speciaal ontworpen voor fotografen, content creators en andere creatieve professionals. De studio bevindt zich in een karakteristiek gebouw en biedt veel natuurlijk licht, waardoor het de ideale locatie is voor fotoshoots, video-opnames en creatieve producties. Reserveer nu jouw sessie via Watdajel en ontdek deze nieuwe creatieve hotspot in Amsterdam!"
+studio_text_en: "Watdajel is launching a new Pop-Up Photo Studio in the centre of Amsterdam: Studio Spuin. Studio Spuin is a unique daylight studio, specially designed for photographers, content creators and other creative professionals. Located in a characteristic building with abundant natural light, it is the ideal location for photoshoots, video productions and creative projects. Book your session now through Watdajel and discover this new creative hotspot in Amsterdam!"
 studio_image: ""
 
 # ─── ABOUT / FOUNDER ───
@@ -24,6 +26,10 @@ about_tag_en: "About Watdajel"
 about_image: "jesus-portal.webp"
 about_link_nl: "Over Watdajel →"
 about_link_en: "About Watdajel →"
+about_headline_nl: "Ergens in een bar in Lima, Peru klinkt gezelligheid, muziek en gelach: het geluid dat Watdajel is gestart."
+about_headline_en: "Somewhere in a bar in Lima, Peru — laughter, music and warmth: the sound that started Watdajel."
+about_text_nl: "Het begon met een simpel idee: creatieven verdienen een plek om elkaar te ontmoeten. Van intieme bar in Lima, tot bruisende broedplaats voor iedereen die creatief ís of meer creativiteit in z'n werk of organisatie wil — ons verhaal gaat over verbinding, cultuur en community."
+about_text_en: "It started with a simple idea: creatives deserve a place to meet. From an intimate bar in Lima to a thriving hub for anyone who is creative or wants more creativity in their work — our story is about connection, culture and community."
 
 # ─── SOLUTIONS ───
 sol_tag_nl: "Workspace oplossingen"
