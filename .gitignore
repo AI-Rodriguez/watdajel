@@ -1,0 +1,17 @@
+# Hugo build output — regenerated on every build, never committed
+/public/
+/resources/
+.hugo_build.lock
+
+# macOS clutter
+.DS_Store
+
+# Secrets — never commit, ever
+.env
+.env.*
+*.key
+*.pem
+
+# Logs and dependencies
+*.log
+node_modules/
