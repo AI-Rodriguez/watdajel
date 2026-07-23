@@ -15,3 +15,6 @@
 # Logs and dependencies
 *.log
 node_modules/
+
+# Private working method — not part of the client deliverable
+CLAUDE.md
