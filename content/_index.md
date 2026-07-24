@@ -7,12 +7,10 @@ hero_btn_en: "Book Spaces"
 hero_video: "hero-video.mp4"
 
 # ─── FLOOR PLAN ───
-plan_image: "render-aerial.webp"
 plan_btn_nl: "Informatie"
 plan_btn_en: "Information"
 steenweg_image_1: "steenweg-composite-2.webp"
 steenweg_image_2: "steenweg-composite-1.webp"
-steenweg_logos: "partner-logos.webp"
 steenweg_photo: "render-aerial.webp"
 steenweg_headline_nl: "De Nieuwe Groene en Creatieve Hub Steenweg"
 steenweg_headline_en: "The New Green and Creative Hub Steenweg"
