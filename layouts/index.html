@@ -79,7 +79,8 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .stw-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2}
 .stw-dot{width:9px;height:9px;border-radius:50%;background:rgba(26,26,26,.22);border:none;padding:0;cursor:pointer;transition:background .3s}
 .stw-dot.active{background:rgba(26,26,26,.65)}
-
+.stw-partners{max-width:1200px;margin:0 auto 72px}
+.stw-partners img{width:100%;display:block}
 
 .stw-content{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
 .stw-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px}
@@ -234,6 +235,9 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
       <button class="stw-dot active" onclick="stwSlide(0)"></button>
       <button class="stw-dot" onclick="stwSlide(1)"></button>
     </div>
+  </div>
+  <div class="stw-partners">
+    <img src="/media/partner-logos.webp" alt="Partners" loading="lazy">
   </div>
   <div class="stw-content">
     <div>
