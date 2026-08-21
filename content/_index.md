@@ -4,7 +4,7 @@ hero_title_nl: "Creative & Sustainable Spaces"
 hero_title_en: "Creative & Sustainable Spaces"
 hero_btn_nl: "Boek een ruimte"
 hero_btn_en: "Book Spaces"
-hero_video: "hero-video.mp4"
+hero_video: "hero-steenweg.mp4"
 
 # ─── FLOOR PLAN ───
 plan_btn_nl: "Informatie"
