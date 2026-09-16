@@ -72,17 +72,17 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 .scroll-line::after{content:'';position:absolute;top:-100%;left:0;width:1px;height:100%;background:var(--white);animation:sd 2s ease-in-out infinite}
 
 /* ── STEENWEG ── */
-.stw{width:100%;background:var(--white);padding:0 0 120px}
+.stw{width:100%;background:var(--white);padding:110px 0 120px}
 .stw-carousel{position:relative;aspect-ratio:16/9;background:var(--white)}
 .stw-carousel img{width:100%;height:100%;object-fit:cover;display:block;opacity:0;transition:opacity .8s ease;position:absolute;top:0;left:0}
 .stw-carousel img.active{opacity:1}
 .stw-dots{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2}
 .stw-dot{width:9px;height:9px;border-radius:50%;background:rgba(26,26,26,.22);border:none;padding:0;cursor:pointer;transition:background .3s}
 .stw-dot.active{background:rgba(26,26,26,.65)}
-.stw-partners{margin:0 0 72px}
+.stw-partners{margin:0}
 .stw-partners img{width:100%;display:block}
 
-.stw-content{max-width:1200px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.stw-content{max-width:1200px;margin:0 auto 72px;padding:0 48px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
 .stw-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:20px}
 .stw-headline{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:600;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:24px}
 .stw-text{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--g600);margin-bottom:32px}
@@ -229,17 +229,6 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 
 <!-- STEENWEG -->
 <section class="stw" id="steenweg">
-  <div class="stw-carousel" id="stwCarousel">
-    <img src="/media/{{ .Params.steenweg_image_1 }}" alt="Steenweg render" class="active">
-    <img src="/media/{{ .Params.steenweg_image_2 }}" alt="Steenweg zaal" loading="lazy">
-    <div class="stw-dots">
-      <button class="stw-dot active" onclick="stwSlide(0)"></button>
-      <button class="stw-dot" onclick="stwSlide(1)"></button>
-    </div>
-  </div>
-  <div class="stw-partners">
-    <img src="/media/partner-logos.webp" alt="Partners" loading="lazy">
-  </div>
   <div class="stw-content">
     <div>
       <div class="stw-tag">Watdajel Opening</div>
@@ -250,6 +239,17 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
     <div class="stw-photo">
       <img src="/media/{{ .Params.steenweg_photo }}" alt="Steenweg — Watdajel" loading="lazy">
     </div>
+  </div>
+  <div class="stw-carousel" id="stwCarousel">
+    <img src="/media/{{ .Params.steenweg_image_1 }}" alt="Steenweg render" class="active">
+    <img src="/media/{{ .Params.steenweg_image_2 }}" alt="Steenweg zaal" loading="lazy">
+    <div class="stw-dots">
+      <button class="stw-dot active" onclick="stwSlide(0)"></button>
+      <button class="stw-dot" onclick="stwSlide(1)"></button>
+    </div>
+  </div>
+  <div class="stw-partners">
+    <img src="/media/partner-logos.webp" alt="Partners" loading="lazy">
   </div>
 </section>
 
