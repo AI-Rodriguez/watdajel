@@ -1,32 +1,143 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Steenweg — Watdajel</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Outfit",-apple-system,sans-serif;color:#1A1A1A;background:#fff;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
-.n{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.06);position:fixed;top:0;left:0;right:0;z-index:100}
-.n-i{max-width:1320px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.n-logo{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:26px;letter-spacing:-.02em;text-decoration:none;color:#6B1D3A}
-.n-back{font-size:14px;font-weight:500;color:#6B6B6B;text-decoration:none;padding:8px 20px;border-radius:50px;border:1.5px solid #E0E0E0;transition:all .25s}
-.n-back:hover{color:#1A1A1A;border-color:#1A1A1A}
-.pg{flex:1;display:flex;align-items:center;justify-content:center;padding:120px 48px 80px;background:#F8F6F3}
-.pg-c{max-width:640px;text-align:center}
-.pg-tag{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:#6B1D3A;margin-bottom:24px}
-.pg-t{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(40px,6vw,72px);font-weight:500;font-style:italic;color:#1A1A1A;line-height:1.05;letter-spacing:-.02em;margin-bottom:24px}
-.pg-sub{font-size:17px;color:#6B6B6B;margin-bottom:48px;line-height:1.7}
-.pg-note{font-size:14px;color:#6B6B6B;font-style:italic;border-top:1px solid #E0E0E0;padding-top:32px;margin-top:32px}
-</style>
-</head>
+{{ partial "head.html" (dict "title" "Steenweg — Watdajel" "description" .Params.lead_nl "ogDescription" .Params.lead_en "ctx" .) }}
 <body>
-<nav class="n"><div class="n-i"><a href="/" class="n-logo">Watdajel</a><a href="/" class="n-back">← Back</a></div></nav>
-<div class="pg"><div class="pg-c">
-  <div class="pg-tag">Onze locatie</div>
-  <h1 class="pg-t">Steenweg, Utrecht</h1>
-  <div class="pg-sub">Steenweg 42<br>Utrecht, Nederland</div>
-  <div class="pg-note">Deze pagina is in opbouw. Meer informatie volgt binnenkort.</div>
-</div></div>
-</body></html>
+
+<style>
+/* ── STEENWEG PAGE (sp-) ── */
+.sp-header{background:var(--white);padding:160px 48px 110px}
+
+.sp-photo{width:100%;padding-bottom:120px;background:var(--white)}
+.sp-photo-box{width:100%;aspect-ratio:16/9;overflow:hidden}
+.sp-photo-box img{width:100%;height:100%;object-fit:cover;display:block}
+
+.sp-work{padding:110px 48px;background:var(--white)}
+.sp-work-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+
+.sp-floor{padding:110px 48px;background:var(--warm)}
+.sp-floor-plan{max-width:1200px;margin:0 auto 64px}
+.sp-floor-plan img{width:100%;display:block;border-radius:12px}
+.sp-floor-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.sp-floor-label{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--forest);margin-bottom:12px}
+.sp-floor-text{font-family:var(--sans);font-size:15px;line-height:1.65;color:var(--g600)}
+
+.sp-split{padding:110px 48px;background:var(--white)}
+.sp-split-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px}
+.sp-split-t{font-family:var(--serif);font-size:clamp(22px,2.6vw,28px);font-weight:600;color:var(--charcoal);margin-bottom:16px}
+.sp-split-text{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--g600)}
+
+.sp-cta{padding:120px 48px;background:var(--warm);text-align:center}
+.sp-cta-in{max-width:680px;margin:0 auto}
+.sp-cta-closer{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(20px,2.4vw,26px);color:var(--charcoal);line-height:1.4;margin-bottom:24px}
+.sp-cta-t{font-family:var(--serif);font-size:clamp(28px,3.5vw,40px);font-weight:600;color:var(--charcoal);line-height:1.25;letter-spacing:-.02em;margin-bottom:32px}
+.sp-cta-mail{display:block;margin-top:20px;font-family:var(--sans);font-size:14px;font-weight:600;color:var(--g600);text-decoration:none;letter-spacing:.3px;transition:color .25s}
+.sp-cta-mail:hover{color:var(--charcoal)}
+
+@media(max-width:1024px){
+  .sp-work-grid,.sp-floor-grid,.sp-split-grid{grid-template-columns:1fr;gap:40px}
+}
+@media(max-width:640px){
+  .sp-header,.sp-work,.sp-floor,.sp-split,.sp-cta{padding-left:24px;padding-right:24px}
+}
+</style>
+
+{{ partial "nav.html" . }}
+
+<!-- HEADER -->
+<section class="sp-header">
+  <div class="intro-in">
+    <div class="stw-tag" data-t="spTag">{{ .Params.tag_nl }}</div>
+    <h1 class="stw-headline" data-t="spTitle">{{ .Params.title_nl }}</h1>
+    <p class="stw-text" data-t="spLead">{{ .Params.lead_nl }}</p>
+  </div>
+</section>
+
+<!-- FULL-BLEED PHOTO + PARTNERS -->
+<section class="sp-photo">
+  <div class="sp-photo-box">
+    <img src="/media/steenweg-zaal.webp" alt="De zaal aan de Steenweg" loading="lazy">
+  </div>
+  <div class="stw-partners">
+    <img src="/media/partner-logos.webp" alt="Partners: Watdajel, Triodos Bank, Cultuur+Ondernemen, a.s.r." loading="lazy">
+  </div>
+</section>
+
+<!-- WERKEN, MAKEN, SAMENKOMEN -->
+<section class="sp-work">
+  <div class="sp-work-grid">
+    <div>
+      <h2 class="stw-headline" data-t="spWorkTitle">{{ .Params.work_title_nl }}</h2>
+      <p class="stw-text" data-t="spWorkText">{{ .Params.work_text_nl }}</p>
+    </div>
+    <div class="stw-photo">
+      <img src="/media/steenweg-facade.webp" alt="Gevel Steenweg" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLAN -->
+<section class="sp-floor">
+  <div class="sp-floor-plan">
+    <img src="/media/steenweg-plattegrond.webp" alt="Plattegrond Steenweg" loading="lazy">
+  </div>
+  <div class="sp-floor-grid">
+    <div>
+      <div class="sp-floor-label" data-t="spFloor1Label">{{ .Params.floor1_label_nl }}</div>
+      <p class="sp-floor-text" data-t="spFloor1Text">{{ .Params.floor1_text_nl }}</p>
+    </div>
+    <div>
+      <div class="sp-floor-label" data-t="spFloor2Label">{{ .Params.floor2_label_nl }}</div>
+      <p class="sp-floor-text" data-t="spFloor2Text">{{ .Params.floor2_text_nl }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- VOOR WIE / DUURZAAM -->
+<section class="sp-split">
+  <div class="sp-split-grid">
+    <div>
+      <h3 class="sp-split-t" data-t="spWhoTitle">{{ .Params.who_title_nl }}</h3>
+      <p class="sp-split-text" data-t="spWhoText">{{ .Params.who_text_nl }}</p>
+    </div>
+    <div>
+      <h3 class="sp-split-t" data-t="spGreenTitle">{{ .Params.green_title_nl }}</h3>
+      <p class="sp-split-text" data-t="spGreenText">{{ .Params.green_text_nl }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sp-cta">
+  <div class="sp-cta-in">
+    <p class="sp-cta-closer" data-t="spCloser">{{ .Params.closer_nl }}</p>
+    <h2 class="sp-cta-t" data-t="spCtaTitle">{{ .Params.cta_title_nl }}</h2>
+    <a href="/media/watdajel-steenweg-brochure.pdf" download class="stw-btn" data-t="spCtaBtn">{{ .Params.cta_btn_nl }}</a>
+    <a href="mailto:verhuur@watdajel.com" class="sp-cta-mail">verhuur@watdajel.com</a>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+
+{{ partial "script.html" . }}
+<script>
+Object.assign(T.nl,{
+  spTag:"{{ .Params.tag_nl }}",spTitle:"{{ .Params.title_nl }}",spLead:"{{ .Params.lead_nl }}",
+  spWorkTitle:"{{ .Params.work_title_nl }}",spWorkText:"{{ .Params.work_text_nl }}",
+  spFloor1Label:"{{ .Params.floor1_label_nl }}",spFloor1Text:"{{ .Params.floor1_text_nl }}",
+  spFloor2Label:"{{ .Params.floor2_label_nl }}",spFloor2Text:"{{ .Params.floor2_text_nl }}",
+  spWhoTitle:"{{ .Params.who_title_nl }}",spWhoText:"{{ .Params.who_text_nl }}",
+  spGreenTitle:"{{ .Params.green_title_nl }}",spGreenText:"{{ .Params.green_text_nl }}",
+  spCloser:"{{ .Params.closer_nl }}",spCtaTitle:"{{ .Params.cta_title_nl }}",spCtaBtn:"{{ .Params.cta_btn_nl }}"
+});
+Object.assign(T.en,{
+  spTag:"{{ .Params.tag_en }}",spTitle:"{{ .Params.title_en }}",spLead:"{{ .Params.lead_en }}",
+  spWorkTitle:"{{ .Params.work_title_en }}",spWorkText:"{{ .Params.work_text_en }}",
+  spFloor1Label:"{{ .Params.floor1_label_en }}",spFloor1Text:"{{ .Params.floor1_text_en }}",
+  spFloor2Label:"{{ .Params.floor2_label_en }}",spFloor2Text:"{{ .Params.floor2_text_en }}",
+  spWhoTitle:"{{ .Params.who_title_en }}",spWhoText:"{{ .Params.who_text_en }}",
+  spGreenTitle:"{{ .Params.green_title_en }}",spGreenText:"{{ .Params.green_text_en }}",
+  spCloser:"{{ .Params.closer_en }}",spCtaTitle:"{{ .Params.cta_title_en }}",spCtaBtn:"{{ .Params.cta_btn_en }}"
+});
+</script>
+</body>
+</html>
