@@ -93,10 +93,11 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 
 /* ── JESUS BLOCK ── */
 .jesus{padding:110px 48px;background:var(--warm)}
-.jesus-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.jesus-in{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:3fr 2fr;gap:72px;align-items:center}
 .jesus-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--burgundy);margin-bottom:24px}
-.jesus-headline{font-family:var(--serif);font-size:clamp(24px,3vw,36px);font-weight:500;font-style:italic;color:var(--charcoal);line-height:1.3;letter-spacing:-.01em;margin-bottom:24px}
+.jesus-headline{font-family:var(--serif);font-size:clamp(28px,3.5vw,44px);font-weight:600;color:var(--charcoal);line-height:1.3;letter-spacing:-.02em;margin-bottom:24px}
 .jesus-text{font-family:var(--sans);font-size:16px;line-height:1.75;color:var(--g600)}
+.jesus-text:first-of-type{margin-bottom:20px}
 .jesus-photo{width:100%;aspect-ratio:4/5;border-radius:12px;overflow:hidden;background:var(--g100);display:flex;align-items:center;justify-content:center;text-decoration:none}
 .jesus-photo img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
 .jesus-ph{font-family:var(--serif);font-size:16px;color:var(--g400);font-style:italic;text-align:center;padding:24px}
@@ -245,6 +246,7 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
       <div class="jesus-tag" data-t="aboutTag">{{ .Params.about_tag_nl }}</div>
       <h2 class="jesus-headline" data-t="aboutHeadline">{{ .Params.about_headline_nl }}</h2>
       <p class="jesus-text" data-t="aboutText">{{ .Params.about_text_nl }}</p>
+      <p class="jesus-text" data-t="aboutText2">{{ .Params.about_text2_nl }}</p>
     </div>
     <div>
       <a href="/about/" class="jesus-photo">
@@ -356,7 +358,7 @@ var T={
   nl:{
     heroTitle:"{{ .Params.hero_title_nl }}",heroBtn:"{{ .Params.hero_btn_nl }}",
     planBtn:"{{ .Params.plan_btn_nl }}",stwHeadline:"{{ .Params.steenweg_headline_nl }}",stwText:"{{ .Params.steenweg_text_nl }}",
-    aboutTag:"{{ .Params.about_tag_nl }}",aboutLink:"{{ .Params.about_link_nl }}",aboutHeadline:"{{ .Params.about_headline_nl }}",aboutText:"{{ .Params.about_text_nl }}",
+    aboutTag:"{{ .Params.about_tag_nl }}",aboutLink:"{{ .Params.about_link_nl }}",aboutHeadline:"{{ .Params.about_headline_nl }}",aboutText:"{{ .Params.about_text_nl }}",aboutText2:"{{ .Params.about_text2_nl }}",
     solTag:"{{ .Params.sol_tag_nl }}",solTitle:"{{ .Params.sol_title_nl }}",solSub:"{{ .Params.sol_sub_nl }}",
     c1t:"{{ .Params.card1_title_nl }}",c1d:"{{ .Params.card1_desc_nl }}",
     c2t:"{{ .Params.card2_title_nl }}",c2d:"{{ .Params.card2_desc_nl }}",
@@ -372,7 +374,7 @@ var T={
   en:{
     heroTitle:"{{ .Params.hero_title_en }}",heroBtn:"{{ .Params.hero_btn_en }}",
     planBtn:"{{ .Params.plan_btn_en }}",stwHeadline:"{{ .Params.steenweg_headline_en }}",stwText:"{{ .Params.steenweg_text_en }}",
-    aboutTag:"{{ .Params.about_tag_en }}",aboutLink:"{{ .Params.about_link_en }}",aboutHeadline:"{{ .Params.about_headline_en }}",aboutText:"{{ .Params.about_text_en }}",
+    aboutTag:"{{ .Params.about_tag_en }}",aboutLink:"{{ .Params.about_link_en }}",aboutHeadline:"{{ .Params.about_headline_en }}",aboutText:"{{ .Params.about_text_en }}",aboutText2:"{{ .Params.about_text2_en }}",
     solTag:"{{ .Params.sol_tag_en }}",solTitle:"{{ .Params.sol_title_en }}",solSub:"{{ .Params.sol_sub_en }}",
     c1t:"{{ .Params.card1_title_en }}",c1d:"{{ .Params.card1_desc_en }}",
     c2t:"{{ .Params.card2_title_en }}",c2d:"{{ .Params.card2_desc_en }}",
