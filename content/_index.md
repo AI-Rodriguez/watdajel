@@ -17,6 +17,14 @@ steenweg_headline_en: "The New Green and Creative Hub Steenweg"
 steenweg_text_nl: "In het hart van Utrecht transformeren we een prachtig monumentaal pand aan de Steenweg tot dé nieuwe Groene en Creatieve Hub. Dit iconische gebouw wordt volledig omgetoverd tot een circulaire, duurzame en inspirerende werkplek voor creatieve ondernemers, makers en organisaties."
 steenweg_text_en: "In the heart of Utrecht, we are transforming a beautiful monumental building on the Steenweg into the new Green and Creative Hub. This iconic building is being fully converted into a circular, sustainable and inspiring workspace for creative entrepreneurs, makers and organisations."
 
+# ─── INTRO ───
+intro_title_nl: "Welkom bij Watdajel Creative & Sustainable Workspaces."
+intro_title_en: "Welcome to Watdajel Creative & Sustainable Workspaces."
+intro_sub_nl: "Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt."
+intro_sub_en: "We believe the environment you work in makes a world of difference."
+intro_text_nl: "Steeds meer mensen breken met vaste structuren en zoeken een plek die past bij hoe zij willen leven en werken. Bij Watdajel Workspaces vind je die plek: een duurzame, inspirerende werkplek in hartje Utrecht waar focus vanzelf komt, ontmoetingen je energie geven, en werken voelt als iets wat je wílt. Waar ondernemerschap, duurzaamheid, cultuur en community samenkomen."
+intro_text_en: "More and more people are breaking with fixed structures and looking for a place that fits how they want to live and work. At Watdajel Workspaces, you'll find that place: a sustainable, inspiring workspace in the heart of Utrecht where focus comes naturally, encounters give you energy, and work feels like something you want. Where entrepreneurship, sustainability, culture and community come together."
+
 # ─── ABOUT / FOUNDER ───
 about_tag_nl: "Over Watdajel"
 about_tag_en: "About Watdajel"
