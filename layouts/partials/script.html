@@ -1,0 +1,31 @@
+<script>
+var lang="nl";
+var T={
+  nl:{
+    ftDesc:"{{ .Site.Home.Params.footer_desc_nl }}",ftPages:"{{ .Site.Home.Params.footer_pages_nl }}",ftRights:"{{ .Site.Home.Params.footer_rights_nl }}",
+    navWelcome:"{{ .Site.Home.Params.nav_welcome_nl }}",navWork:"{{ .Site.Home.Params.nav_work_nl }}",
+    navAbout:"{{ .Site.Home.Params.nav_about_nl }}",navContact:"{{ .Site.Home.Params.nav_contact_nl }}",
+    navCta:"{{ .Site.Home.Params.nav_cta_nl }}",langSwitch:"{{ .Site.Home.Params.lang_switch_nl }}"
+  },
+  en:{
+    ftDesc:"{{ .Site.Home.Params.footer_desc_en }}",ftPages:"{{ .Site.Home.Params.footer_pages_en }}",ftRights:"{{ .Site.Home.Params.footer_rights_en }}",
+    navWelcome:"{{ .Site.Home.Params.nav_welcome_en }}",navWork:"{{ .Site.Home.Params.nav_work_en }}",
+    navAbout:"{{ .Site.Home.Params.nav_about_en }}",navContact:"{{ .Site.Home.Params.nav_contact_en }}",
+    navCta:"{{ .Site.Home.Params.nav_cta_en }}",langSwitch:"{{ .Site.Home.Params.lang_switch_en }}"
+  }
+};
+function applyLang(){
+  document.querySelectorAll("[data-t]").forEach(function(el){
+    var k=el.getAttribute("data-t");if(T[lang][k]!==undefined)el.textContent=T[lang][k];
+  });
+  document.getElementById("langBtn").textContent=lang==="nl"?"EN":"NL";
+  document.documentElement.lang=lang;
+}
+function toggleLang(){lang=lang==="nl"?"en":"nl";applyLang();}
+function toggleMenu(){document.getElementById("mm").classList.toggle("open");document.getElementById("burger").classList.toggle("open");}
+function closeMM(){document.getElementById("mm").classList.remove("open");document.getElementById("burger").classList.remove("open");}
+window.addEventListener("scroll",function(){
+  var nav=document.getElementById("nav");
+  if(nav&&nav.dataset.home==="true"){nav.className=window.scrollY>60?"n n--s":"n n--t";}
+});
+</script>

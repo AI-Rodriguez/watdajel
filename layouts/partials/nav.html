@@ -1,0 +1,27 @@
+<!-- NAV -->
+<nav class="n {{ if .IsHome }}n--t{{ else }}n--s{{ end }}" id="nav" data-home="{{ .IsHome }}">
+  <div class="n-i">
+    <a href="/" class="n-logo">Watdajel</a>
+    <div class="n-links">
+      <a href="/#welkom" class="n-link" data-t="navWelcome">{{ .Site.Home.Params.nav_welcome_nl }}</a>
+      <a href="/steenweg/" class="n-link">Steenweg</a>
+      <a href="/#workspaces" class="n-link" data-t="navWork">{{ .Site.Home.Params.nav_work_nl }}</a>
+      <a href="/about/" class="n-link" data-t="navAbout">{{ .Site.Home.Params.nav_about_nl }}</a>
+      <a href="/#contact" class="n-link" data-t="navContact">{{ .Site.Home.Params.nav_contact_nl }}</a>
+      <button class="n-lang" id="langBtn" onclick="toggleLang()">EN</button>
+      <a href="/steenweg/" class="n-cta" data-t="navCta">{{ .Site.Home.Params.nav_cta_nl }}</a>
+    </div>
+    <button class="n-burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mm" id="mm">
+  <a href="/#welkom" onclick="closeMM()" data-t="navWelcome">{{ .Site.Home.Params.nav_welcome_nl }}</a>
+  <a href="/steenweg/" onclick="closeMM()">Steenweg</a>
+  <a href="/#workspaces" onclick="closeMM()" data-t="navWork">{{ .Site.Home.Params.nav_work_nl }}</a>
+  <a href="/about/" onclick="closeMM()" data-t="navAbout">{{ .Site.Home.Params.nav_about_nl }}</a>
+  <a href="/#contact" onclick="closeMM()" data-t="navContact">{{ .Site.Home.Params.nav_contact_nl }}</a>
+  <button class="mm-lang" onclick="toggleLang();closeMM()" data-t="langSwitch">{{ .Site.Home.Params.lang_switch_nl }}</button>
+  <a href="/steenweg/" class="mm-cta" data-t="navCta">{{ .Site.Home.Params.nav_cta_nl }} →</a>
+</div>
