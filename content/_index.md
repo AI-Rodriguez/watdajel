@@ -17,15 +17,6 @@ steenweg_headline_en: "The New Green and Creative Hub Steenweg"
 steenweg_text_nl: "In het hart van Utrecht transformeren we een prachtig monumentaal pand aan de Steenweg tot dé nieuwe Groene en Creatieve Hub. Dit iconische gebouw wordt volledig omgetoverd tot een circulaire, duurzame en inspirerende werkplek voor creatieve ondernemers, makers en organisaties."
 steenweg_text_en: "In the heart of Utrecht, we are transforming a beautiful monumental building on the Steenweg into the new Green and Creative Hub. This iconic building is being fully converted into a circular, sustainable and inspiring workspace for creative entrepreneurs, makers and organisations."
 
-# ─── FOTO STUDIO ───
-studio_title_nl: "Foto Studio Pop-Up Amsterdam"
-studio_title_en: "Pop-Up Photo Studio Amsterdam"
-studio_link_nl: "Ontdek de studio →"
-studio_link_en: "Discover the studio →"
-studio_text_nl: "Watdajel lanceert een nieuwe Foto Studio Pop-Up in het centrum van Amsterdam: Studio Spuin. Studio Spuin is een unieke daglichtstudio, speciaal ontworpen voor fotografen, content creators en andere creatieve professionals. De studio bevindt zich in een karakteristiek gebouw en biedt veel natuurlijk licht, waardoor het de ideale locatie is voor fotoshoots, video-opnames en creatieve producties. Reserveer nu jouw sessie via Watdajel en ontdek deze nieuwe creatieve hotspot in Amsterdam!"
-studio_text_en: "Watdajel is launching a new Pop-Up Photo Studio in the centre of Amsterdam: Studio Spuin. Studio Spuin is a unique daylight studio, specially designed for photographers, content creators and other creative professionals. Located in a characteristic building with abundant natural light, it is the ideal location for photoshoots, video productions and creative projects. Book your session now through Watdajel and discover this new creative hotspot in Amsterdam!"
-studio_image: ""
-
 # ─── ABOUT / FOUNDER ───
 about_tag_nl: "Over Watdajel"
 about_tag_en: "About Watdajel"
