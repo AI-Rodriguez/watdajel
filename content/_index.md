@@ -39,6 +39,7 @@ about_text_en: "Watdajel didn't start as a big concept, but as a personal missio
 about_text2_en: "After moving to the Netherlands more than 12 years ago, Jesús noticed a strong need here too for places where creativity and entrepreneurship come together. Over the years he built a solid network across the cultural, sustainable and entrepreneurial sectors in and around Utrecht."
 
 # ─── SOLUTIONS ───
+show_solutions: false
 sol_tag_nl: "Workspace oplossingen"
 sol_tag_en: "Workspace solutions"
 sol_title_nl: "Waar innovatie en community samenkomen"

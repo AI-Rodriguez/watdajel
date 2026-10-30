@@ -79,6 +79,7 @@
   </div>
 </section>
 
+{{ if eq (lower (printf "%v" .Params.show_solutions)) "true" }}
 <!-- SOLUTIONS -->
 <section class="sol" id="workspaces">
   <div class="sol-in">
@@ -123,6 +124,7 @@
     </div>
   </div>
 </section>
+{{ end }}
 
 {{ partial "footer.html" . }}
 

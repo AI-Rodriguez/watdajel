@@ -18,7 +18,7 @@
       <ul>
         <li><a href="/#welkom" data-t="navWelcome">{{ .Site.Home.Params.nav_welcome_nl }}</a></li>
         <li><a href="/steenweg/">Steenweg</a></li>
-        <li><a href="/#workspaces" data-t="navWork">{{ .Site.Home.Params.nav_work_nl }}</a></li>
+        {{ if eq (lower (printf "%v" .Site.Home.Params.show_solutions)) "true" }}<li><a href="/#workspaces" data-t="navWork">{{ .Site.Home.Params.nav_work_nl }}</a></li>{{ end }}
         <li><a href="/about/" data-t="navAbout">{{ .Site.Home.Params.nav_about_nl }}</a></li>
         <li><a href="/#contact" data-t="navContact">{{ .Site.Home.Params.nav_contact_nl }}</a></li>
       </ul>
