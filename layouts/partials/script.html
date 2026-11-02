@@ -24,8 +24,10 @@ function applyLang(){
 function toggleLang(){lang=lang==="nl"?"en":"nl";applyLang();}
 function toggleMenu(){document.getElementById("mm").classList.toggle("open");document.getElementById("burger").classList.toggle("open");}
 function closeMM(){document.getElementById("mm").classList.remove("open");document.getElementById("burger").classList.remove("open");}
-window.addEventListener("scroll",function(){
+function updateNav(){
   var nav=document.getElementById("nav");
   if(nav&&nav.dataset.home==="true"){nav.className=window.scrollY>60?"n n--s":"n n--t";}
-});
+}
+window.addEventListener("scroll",updateNav);
+updateNav();
 </script>
