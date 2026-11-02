@@ -2,8 +2,8 @@
 # ─── HERO ───
 hero_title_nl: "Creative & Sustainable Spaces"
 hero_title_en: "Creative & Sustainable Spaces"
-hero_btn_nl: "Boek een ruimte"
-hero_btn_en: "Book Spaces"
+hero_btn_nl: "Kantoren huren"
+hero_btn_en: "Rent an office"
 hero_video: "hero-steenweg.mp4"
 
 # ─── FLOOR PLAN ───
@@ -91,8 +91,8 @@ nav_about_nl: "Over Ons"
 nav_about_en: "About"
 nav_contact_nl: "Contact"
 nav_contact_en: "Contact"
-nav_cta_nl: "Boek een ruimte"
-nav_cta_en: "Book Spaces"
+nav_cta_nl: "Kantoren huren"
+nav_cta_en: "Rent an office"
 lang_switch_nl: "Switch to English"
 lang_switch_en: "Schakel naar Nederlands"
 ---
