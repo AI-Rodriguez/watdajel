@@ -18,7 +18,7 @@
 <style>
 :root{
   --black:#0F0F0F;--charcoal:#1A1A1A;--g600:#6B6B6B;--g400:#9B9B9B;--g200:#E0E0E0;--g100:#F5F5F5;
-  --warm:#F8F6F3;--white:#FFF;--burgundy:#6B1D3A;--forest:#2E5A43;--purple:#5B4FC7;
+  --warm:#F8F6F3;--white:#FFF;--burgundy:#6B1D3A;--forest:#2E5A43;--olive:#4A5A38;--purple:#5B4FC7;
   --serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',-apple-system,sans-serif;
   --pill:50px;
 }
@@ -137,23 +137,23 @@ body{font-family:var(--sans);color:var(--charcoal);background:var(--white)}
 /* ── VERGADERING ── */
 
 /* ── FOOTER ── */
-.ft{background:var(--black);color:rgba(255,255,255,.5);padding:64px 48px 32px}
+.ft{background:var(--olive);color:rgba(255,255,255,.85);padding:64px 48px 32px}
 .ft-in{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px}
 .ft-brand{display:block;width:auto;height:44px;margin-bottom:12px}
-.ft-legal{font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.5);line-height:1.8;margin:0}
-.ft-label{font-family:var(--sans);font-size:12px;color:rgba(255,255,255,.4);margin-top:12px;font-style:italic}
+.ft-legal{font-family:var(--sans);font-size:13px;color:rgba(255,255,255,.85);line-height:1.8;margin:0}
+.ft-label{font-family:var(--sans);font-size:12px;color:rgba(255,255,255,.85);margin-top:12px;font-style:italic}
 .ft p{font-family:var(--sans);font-size:14px;line-height:1.7;margin-bottom:20px}
 .ft-social{display:flex;gap:10px;margin-top:4px}
 .ft-social a,.ft-social span{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.07);display:flex;align-items:center;justify-content:center;transition:all .3s}
 .ft-social a{cursor:pointer;text-decoration:none}
 .ft-social span{cursor:default}
 .ft-social a:hover{background:var(--burgundy);transform:translateY(-2px)}
-.ft-social svg{width:16px;height:16px;fill:rgba(255,255,255,.55)}
+.ft-social svg{width:16px;height:16px;fill:rgba(255,255,255,.85)}
 .ft-social a:hover svg{fill:var(--white)}
 .ft h4{font-family:var(--sans);font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--white);margin-bottom:16px}
 .ft ul{list-style:none}.ft li{margin-bottom:10px}
-.ft li a{color:rgba(255,255,255,.45);text-decoration:none;font-family:var(--sans);font-size:14px;transition:color .2s}
-.ft li a:hover{color:rgba(255,255,255,.8)}
+.ft li a{color:rgba(255,255,255,.85);text-decoration:none;font-family:var(--sans);font-size:14px;transition:color .2s}
+.ft li a:hover{color:var(--white);text-decoration:underline}
 .ft-bot{max-width:1320px;margin:40px auto 0;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;font-family:var(--sans);font-size:13px}
 
 /* ── ANIMATIONS ── */
