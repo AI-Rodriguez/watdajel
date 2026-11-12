@@ -99,12 +99,8 @@ card4_desc_en: Day passes and flexible memberships in a creative environment.
   Join the Watdajel community and never work alone again.
 card_link_nl: Meer info
 card_link_en: Learn more
-footer_desc_nl: Creative & sustainable spaces in het hart van Utrecht.
-footer_desc_en: Creative & sustainable spaces in the heart of Utrecht.
 footer_pages_nl: Pagina's
 footer_pages_en: Pages
-footer_rights_nl: Alle rechten voorbehouden.
-footer_rights_en: All rights reserved.
 nav_welcome_nl: Welkom
 nav_welcome_en: Welcome
 nav_work_nl: Workspaces
