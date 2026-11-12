@@ -1,0 +1,143 @@
+media:
+  input: static/media
+  output: /media
+
+settings:
+  content:
+    merge: true   # keep frontmatter keys that aren't listed below
+
+content:
+  - name: home
+    label: Homepage
+    type: file
+    path: content/_index.md
+    format: yaml-frontmatter
+    fields:
+      # Hero
+      - { name: hero_title_nl, label: "Hero · Title (NL)", type: string }
+      - { name: hero_title_en, label: "Hero · Title (EN)", type: string }
+      - { name: hero_btn_nl, label: "Hero · Button (NL)", type: string }
+      - { name: hero_btn_en, label: "Hero · Button (EN)", type: string }
+      - name: hero_video
+        label: "Hero · Background video"
+        type: file
+        options: { categories: [video] }
+      # Steenweg block
+      - { name: steenweg_headline_nl, label: "Steenweg · Headline (NL)", type: string }
+      - { name: steenweg_headline_en, label: "Steenweg · Headline (EN)", type: string }
+      - { name: steenweg_text_nl, label: "Steenweg · Text (NL)", type: text }
+      - { name: steenweg_text_en, label: "Steenweg · Text (EN)", type: text }
+      - { name: plan_btn_nl, label: "Steenweg · Button (NL)", type: string }
+      - { name: plan_btn_en, label: "Steenweg · Button (EN)", type: string }
+      - { name: steenweg_photo, label: "Steenweg · Photo (next to text)", type: image }
+      - { name: steenweg_image_1, label: "Steenweg · Carousel image 1", type: image }
+      - { name: steenweg_image_2, label: "Steenweg · Carousel image 2", type: image }
+      # Intro
+      - { name: intro_title_nl, label: "Intro · Title (NL)", type: string }
+      - { name: intro_title_en, label: "Intro · Title (EN)", type: string }
+      - { name: intro_sub_nl, label: "Intro · Subtitle (NL)", type: text }
+      - { name: intro_sub_en, label: "Intro · Subtitle (EN)", type: text }
+      - { name: intro_text_nl, label: "Intro · Text (NL)", type: text }
+      - { name: intro_text_en, label: "Intro · Text (EN)", type: text }
+      # About block
+      - { name: about_tag_nl, label: "About · Label (NL)", type: string }
+      - { name: about_tag_en, label: "About · Label (EN)", type: string }
+      - { name: about_headline_nl, label: "About · Headline (NL)", type: string }
+      - { name: about_headline_en, label: "About · Headline (EN)", type: string }
+      - { name: about_text_nl, label: "About · Paragraph 1 (NL)", type: text }
+      - { name: about_text_en, label: "About · Paragraph 1 (EN)", type: text }
+      - { name: about_text2_nl, label: "About · Paragraph 2 (NL)", type: text }
+      - { name: about_text2_en, label: "About · Paragraph 2 (EN)", type: text }
+      - { name: about_link_nl, label: "About · Link text (NL)", type: string }
+      - { name: about_link_en, label: "About · Link text (EN)", type: string }
+      - name: about_image
+        label: "About · Portrait"
+        type: image
+        description: "If empty, a 'portrait coming soon' placeholder is shown."
+      # Workspace solutions
+      - name: show_solutions
+        label: "Solutions · Show section"
+        type: boolean
+        description: "Also shows/hides the 'Workspaces' menu link."
+      - { name: sol_tag_nl, label: "Solutions · Label (NL)", type: string }
+      - { name: sol_tag_en, label: "Solutions · Label (EN)", type: string }
+      - { name: sol_title_nl, label: "Solutions · Title (NL)", type: string }
+      - { name: sol_title_en, label: "Solutions · Title (EN)", type: string }
+      - { name: sol_sub_nl, label: "Solutions · Subtitle (NL)", type: text }
+      - { name: sol_sub_en, label: "Solutions · Subtitle (EN)", type: text }
+      - { name: card1_title_nl, label: "Card 1 · Title (NL)", type: string }
+      - { name: card1_title_en, label: "Card 1 · Title (EN)", type: string }
+      - { name: card1_desc_nl, label: "Card 1 · Description (NL)", type: text }
+      - { name: card1_desc_en, label: "Card 1 · Description (EN)", type: text }
+      - { name: card1_image, label: "Card 1 · Image", type: image }
+      - { name: card2_title_nl, label: "Card 2 · Title (NL)", type: string }
+      - { name: card2_title_en, label: "Card 2 · Title (EN)", type: string }
+      - { name: card2_desc_nl, label: "Card 2 · Description (NL)", type: text }
+      - { name: card2_desc_en, label: "Card 2 · Description (EN)", type: text }
+      - { name: card2_image, label: "Card 2 · Image", type: image }
+      - { name: card3_title_nl, label: "Card 3 · Title (NL)", type: string }
+      - { name: card3_title_en, label: "Card 3 · Title (EN)", type: string }
+      - { name: card3_desc_nl, label: "Card 3 · Description (NL)", type: text }
+      - { name: card3_desc_en, label: "Card 3 · Description (EN)", type: text }
+      - { name: card3_image, label: "Card 3 · Image", type: image }
+      - { name: card4_title_nl, label: "Card 4 · Title (NL)", type: string }
+      - { name: card4_title_en, label: "Card 4 · Title (EN)", type: string }
+      - { name: card4_desc_nl, label: "Card 4 · Description (NL)", type: text }
+      - { name: card4_desc_en, label: "Card 4 · Description (EN)", type: text }
+      - { name: card4_image, label: "Card 4 · Image", type: image }
+      - { name: card_link_nl, label: "Cards · Link text (NL)", type: string }
+      - { name: card_link_en, label: "Cards · Link text (EN)", type: string }
+      # Navigation & footer (shared by all pages)
+      - { name: nav_welcome_nl, label: "Menu · Welcome (NL)", type: string }
+      - { name: nav_welcome_en, label: "Menu · Welcome (EN)", type: string }
+      - { name: nav_work_nl, label: "Menu · Workspaces (NL)", type: string }
+      - { name: nav_work_en, label: "Menu · Workspaces (EN)", type: string }
+      - { name: nav_about_nl, label: "Menu · About (NL)", type: string }
+      - { name: nav_about_en, label: "Menu · About (EN)", type: string }
+      - { name: nav_contact_nl, label: "Menu · Contact (NL)", type: string }
+      - { name: nav_contact_en, label: "Menu · Contact (EN)", type: string }
+      - { name: nav_cta_nl, label: "Menu · Button (NL)", type: string }
+      - { name: nav_cta_en, label: "Menu · Button (EN)", type: string }
+      - { name: lang_switch_nl, label: "Mobile menu · Language switch (shown in NL)", type: string }
+      - { name: lang_switch_en, label: "Mobile menu · Language switch (shown in EN)", type: string }
+      - { name: footer_pages_nl, label: "Footer · Pages heading (NL)", type: string }
+      - { name: footer_pages_en, label: "Footer · Pages heading (EN)", type: string }
+
+  - name: steenweg
+    label: Steenweg page
+    type: file
+    path: content/steenweg/_index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: tag_nl, label: "Header · Label (NL)", type: string }
+      - { name: tag_en, label: "Header · Label (EN)", type: string }
+      - { name: title_nl, label: "Header · Title (NL)", type: string }
+      - { name: title_en, label: "Header · Title (EN)", type: string }
+      - { name: lead_nl, label: "Header · Intro text (NL)", type: text }
+      - { name: lead_en, label: "Header · Intro text (EN)", type: text }
+      - { name: work_title_nl, label: "Work · Title (NL)", type: string }
+      - { name: work_title_en, label: "Work · Title (EN)", type: string }
+      - { name: work_text_nl, label: "Work · Text (NL)", type: text }
+      - { name: work_text_en, label: "Work · Text (EN)", type: text }
+      - { name: floor1_label_nl, label: "Floor 1 · Label (NL)", type: string }
+      - { name: floor1_label_en, label: "Floor 1 · Label (EN)", type: string }
+      - { name: floor1_text_nl, label: "Floor 1 · Text (NL)", type: text }
+      - { name: floor1_text_en, label: "Floor 1 · Text (EN)", type: text }
+      - { name: floor2_label_nl, label: "Floor 2 · Label (NL)", type: string }
+      - { name: floor2_label_en, label: "Floor 2 · Label (EN)", type: string }
+      - { name: floor2_text_nl, label: "Floor 2 · Text (NL)", type: text }
+      - { name: floor2_text_en, label: "Floor 2 · Text (EN)", type: text }
+      - { name: who_title_nl, label: "Who it's for · Title (NL)", type: string }
+      - { name: who_title_en, label: "Who it's for · Title (EN)", type: string }
+      - { name: who_text_nl, label: "Who it's for · Text (NL)", type: text }
+      - { name: who_text_en, label: "Who it's for · Text (EN)", type: text }
+      - { name: green_title_nl, label: "Sustainable · Title (NL)", type: string }
+      - { name: green_title_en, label: "Sustainable · Title (EN)", type: string }
+      - { name: green_text_nl, label: "Sustainable · Text (NL)", type: text }
+      - { name: green_text_en, label: "Sustainable · Text (EN)", type: text }
+      - { name: closer_nl, label: "Closing · Line (NL)", type: string }
+      - { name: closer_en, label: "Closing · Line (EN)", type: string }
+      - { name: cta_title_nl, label: "Closing · Title (NL)", type: text }
+      - { name: cta_title_en, label: "Closing · Title (EN)", type: text }
+      - { name: cta_btn_nl, label: "Closing · Brochure button (NL)", type: string }
+      - { name: cta_btn_en, label: "Closing · Brochure button (EN)", type: string }
