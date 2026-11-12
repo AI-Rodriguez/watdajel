@@ -1,5 +1,5 @@
 ---
-hero_title_nl: Creative & Sustainable Spaces.
+hero_title_nl: Creative & Sustainable Spaces
 hero_title_en: Creative & Sustainable Spaces
 hero_btn_nl: Kantoren huren
 hero_btn_en: Rent an office
