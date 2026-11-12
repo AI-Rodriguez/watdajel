@@ -1,6 +1,7 @@
 baseURL = "https://www.watdajel.com"
 languageCode = "nl"
 title = "Watdajel — Creative & Sustainable Workspaces"
+disableKinds = ["taxonomy", "term"]
 
 [build]
   writeStats = false
