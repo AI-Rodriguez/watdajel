@@ -8,7 +8,7 @@
 <!-- HERO -->
 <section class="hero" id="welkom">
   <video class="hero-video" autoplay muted loop playsinline>
-    <source src="/media/{{ .Params.hero_video }}" type="video/mp4">
+    <source src="/media/{{ path.Base .Params.hero_video }}" type="video/mp4">
   </video>
   <div class="hero-ov"></div>
   <div class="hero-c">
@@ -30,12 +30,12 @@
       <a href="/steenweg/" class="stw-btn" data-t="planBtn">{{ .Params.plan_btn_nl }}</a>
     </div>
     <div class="stw-photo">
-      <img src="/media/{{ .Params.steenweg_photo }}" alt="Steenweg — Watdajel" loading="lazy">
+      <img src="/media/{{ path.Base .Params.steenweg_photo }}" alt="Steenweg — Watdajel" loading="lazy">
     </div>
   </div>
   <div class="stw-carousel" id="stwCarousel">
-    <img src="/media/{{ .Params.steenweg_image_1 }}" alt="Steenweg render" class="active">
-    <img src="/media/{{ .Params.steenweg_image_2 }}" alt="Steenweg zaal" loading="lazy">
+    <img src="/media/{{ path.Base .Params.steenweg_image_1 }}" alt="Steenweg render" class="active">
+    <img src="/media/{{ path.Base .Params.steenweg_image_2 }}" alt="Steenweg zaal" loading="lazy">
     <div class="stw-dots">
       <button class="stw-dot active" onclick="stwSlide(0)"></button>
       <button class="stw-dot" onclick="stwSlide(1)"></button>
@@ -67,7 +67,7 @@
     <div>
       <a href="/about/" class="jesus-photo">
         {{ if .Params.about_image }}
-        <img src="/media/{{ .Params.about_image }}" alt="Jesus Portal — Oprichter Watdajel" loading="lazy">
+        <img src="/media/{{ path.Base .Params.about_image }}" alt="Jesus Portal — Oprichter Watdajel" loading="lazy">
         {{ else }}
         <span class="jesus-ph">Portret volgt binnenkort</span>
         {{ end }}
@@ -90,7 +90,7 @@
     </div>
     <div class="sol-grid">
       <a class="sc" href="#contact">
-        <div class="sc-img">{{ if .Params.card1_image }}<img src="/media/{{ .Params.card1_image }}" alt="" loading="lazy">{{ end }}</div>
+        <div class="sc-img">{{ if .Params.card1_image }}<img src="/media/{{ path.Base .Params.card1_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
           <h3 class="sc-t" data-t="c1t">{{ .Params.card1_title_nl }}</h3>
           <p class="sc-d" data-t="c1d">{{ .Params.card1_desc_nl }}</p>
@@ -98,7 +98,7 @@
         </div>
       </a>
       <a class="sc" href="#contact">
-        <div class="sc-img">{{ if .Params.card2_image }}<img src="/media/{{ .Params.card2_image }}" alt="" loading="lazy">{{ end }}</div>
+        <div class="sc-img">{{ if .Params.card2_image }}<img src="/media/{{ path.Base .Params.card2_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
           <h3 class="sc-t" data-t="c2t">{{ .Params.card2_title_nl }}</h3>
           <p class="sc-d" data-t="c2d">{{ .Params.card2_desc_nl }}</p>
@@ -106,7 +106,7 @@
         </div>
       </a>
       <a class="sc" href="#contact">
-        <div class="sc-img">{{ if .Params.card3_image }}<img src="/media/{{ .Params.card3_image }}" alt="" loading="lazy">{{ end }}</div>
+        <div class="sc-img">{{ if .Params.card3_image }}<img src="/media/{{ path.Base .Params.card3_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
           <h3 class="sc-t" data-t="c3t">{{ .Params.card3_title_nl }}</h3>
           <p class="sc-d" data-t="c3d">{{ .Params.card3_desc_nl }}</p>
@@ -114,7 +114,7 @@
         </div>
       </a>
       <a class="sc" href="#contact">
-        <div class="sc-img">{{ if .Params.card4_image }}<img src="/media/{{ .Params.card4_image }}" alt="" loading="lazy">{{ end }}</div>
+        <div class="sc-img">{{ if .Params.card4_image }}<img src="/media/{{ path.Base .Params.card4_image }}" alt="" loading="lazy">{{ end }}</div>
         <div class="sc-body">
           <h3 class="sc-t" data-t="c4t">{{ .Params.card4_title_nl }}</h3>
           <p class="sc-d" data-t="c4d">{{ .Params.card4_desc_nl }}</p>
