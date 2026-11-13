@@ -141,3 +141,20 @@ content:
       - { name: cta_title_en, label: "Closing · Title (EN)", type: text }
       - { name: cta_btn_nl, label: "Closing · Brochure button (NL)", type: string }
       - { name: cta_btn_en, label: "Closing · Brochure button (EN)", type: string }
+
+  - name: about
+    label: About page
+    type: file
+    path: content/about/_index.md
+    format: yaml-frontmatter
+    fields:
+      - { name: tag_nl, label: "Header · Label (NL)", type: string }
+      - { name: tag_en, label: "Header · Label (EN)", type: string }
+      - { name: title_nl, label: "Header · Title (NL)", type: string }
+      - { name: title_en, label: "Header · Title (EN)", type: string }
+      - { name: sub_nl, label: "Header · Subtitle (NL)", type: text }
+      - { name: sub_en, label: "Header · Subtitle (EN)", type: text }
+      - { name: text_nl, label: "Paragraph 1 (NL)", type: text }
+      - { name: text_en, label: "Paragraph 1 (EN)", type: text }
+      - { name: text2_nl, label: "Paragraph 2 (NL)", type: text }
+      - { name: text2_en, label: "Paragraph 2 (EN)", type: text }

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="nl">
-{{ partial "head.html" (dict "title" "About — Watdajel" "description" "Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt." "ogDescription" "Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt." "ctx" .) }}
+{{ partial "head.html" (dict "title" "About — Watdajel" "description" .Params.sub_nl "ogDescription" (.Params.sub_en | default .Params.sub_nl) "ctx" .) }}
 <body>
 
 <style>
@@ -19,15 +19,25 @@
 {{ partial "nav.html" . }}
 
 <div class="pg"><div class="pg-c">
-  <div class="pg-tag">Over Watdajel</div>
-  <h1 class="pg-t">Welkom bij Watdajel Workspaces.</h1>
-  <p class="pg-sub">Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt.</p>
-  <p class="pg-body">Steeds meer mensen breken met vaste structuren en zoeken een plek die past bij hoe zij willen leven en werken. Bij Watdajel Workspaces vind je die plek: een duurzame, inspirerende werkplek in hartje Utrecht waar focus vanzelf komt, ontmoetingen je energie geven, en werken voelt als iets wat je wílt. Waar ondernemerschap, duurzaamheid, cultuur en community samenkomen. De toekomst van werken begint hier. Sluit je aan!</p>
-  <p class="pg-body">Watdajel is de perfecte ruimte voor iedereen die een toffe sustainable werkplek zoekt. In deze circulaire hub – in het hart van Utrecht – stappen ondernemers en organisaties een ervaring binnen die ze inspiratie en creativiteit oplevert. Of ze nu komen om te focussen of anderen te ontmoeten, in onze workspaces kan het allemaal.</p>
+  <div class="pg-tag" data-t="apTag">{{ .Params.tag_nl }}</div>
+  <h1 class="pg-t" data-t="apTitle">{{ .Params.title_nl }}</h1>
+  <p class="pg-sub" data-t="apSub">{{ .Params.sub_nl }}</p>
+  <p class="pg-body" data-t="apText">{{ .Params.text_nl }}</p>
+  <p class="pg-body" data-t="apText2">{{ .Params.text2_nl }}</p>
 </div></div>
 
 {{ partial "footer.html" . }}
 
 {{ partial "script.html" . }}
+<script>
+Object.assign(T.nl,{
+  apTag:"{{ .Params.tag_nl }}",apTitle:"{{ .Params.title_nl }}",apSub:"{{ .Params.sub_nl }}",
+  apText:"{{ .Params.text_nl }}",apText2:"{{ .Params.text2_nl }}"
+});
+Object.assign(T.en,{
+  apTag:"{{ .Params.tag_en | default .Params.tag_nl }}",apTitle:"{{ .Params.title_en | default .Params.title_nl }}",apSub:"{{ .Params.sub_en | default .Params.sub_nl }}",
+  apText:"{{ .Params.text_en | default .Params.text_nl }}",apText2:"{{ .Params.text2_en | default .Params.text2_nl }}"
+});
+</script>
 </body>
 </html>
