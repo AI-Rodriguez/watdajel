@@ -109,6 +109,14 @@ footer_phone_nl: Tel
 footer_phone_en: Phone
 footer_rights_nl: Alle rechten voorbehouden.
 footer_rights_en: All rights reserved.
+notfound_tag_nl: "404"
+notfound_tag_en: "404"
+notfound_title_nl: Deze pagina bestaat niet (meer)
+notfound_title_en: This page doesn't exist (anymore)
+notfound_text_nl: Misschien is de link verouderd, of zit er een typfout in.
+notfound_text_en: The link may be outdated, or there may be a typo.
+notfound_btn_nl: Naar de homepage
+notfound_btn_en: Go to the homepage
 nav_welcome_nl: Welkom
 nav_welcome_en: Welcome
 nav_work_nl: Workspaces

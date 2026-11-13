@@ -110,6 +110,15 @@ content:
       - { name: footer_phone_en, label: "Footer · Phone label (EN)", type: string }
       - { name: footer_rights_nl, label: "Footer · Copyright notice (NL)", type: string }
       - { name: footer_rights_en, label: "Footer · Copyright notice (EN)", type: string }
+      # 404 page (shown for addresses that don't exist)
+      - { name: notfound_tag_nl, label: "404 · Label (NL)", type: string }
+      - { name: notfound_tag_en, label: "404 · Label (EN)", type: string }
+      - { name: notfound_title_nl, label: "404 · Title (NL)", type: string }
+      - { name: notfound_title_en, label: "404 · Title (EN)", type: string }
+      - { name: notfound_text_nl, label: "404 · Text (NL)", type: string }
+      - { name: notfound_text_en, label: "404 · Text (EN)", type: string }
+      - { name: notfound_btn_nl, label: "404 · Button (NL)", type: string }
+      - { name: notfound_btn_en, label: "404 · Button (EN)", type: string }
 
   - name: steenweg
     label: Steenweg page

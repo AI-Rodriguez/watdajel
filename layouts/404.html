@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+{{ $p := .Site.Home.Params }}
+{{ partial "head.html" (dict "title" (printf "%s — Watdajel" $p.notfound_title_nl) "description" $p.notfound_text_nl "ogDescription" ($p.notfound_text_en | default $p.notfound_text_nl) "ctx" .) }}
+<body>
+
+<style>
+/* ── 404 PAGE (nf-) ── */
+.nf{padding:140px 48px 110px;background:var(--warm)}
+.nf-in{max-width:680px;margin:0 auto;text-align:center}
+.nf-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--forest);margin-bottom:24px}
+.nf-t{font-family:var(--serif);font-size:clamp(32px,5vw,56px);font-weight:500;font-style:italic;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:24px}
+.nf-text{font-family:var(--sans);font-size:17px;color:var(--g600);line-height:1.8;margin-bottom:40px}
+@media(max-width:640px){
+  .nf{padding:120px 24px 80px}
+}
+</style>
+
+{{ partial "nav.html" . }}
+
+<div class="nf"><div class="nf-in">
+  <div class="nf-tag" data-t="nfTag">{{ $p.notfound_tag_nl }}</div>
+  <h1 class="nf-t" data-t="nfTitle">{{ $p.notfound_title_nl }}</h1>
+  <p class="nf-text" data-t="nfText">{{ $p.notfound_text_nl }}</p>
+  <a href="/" class="stw-btn" data-t="nfBtn">{{ $p.notfound_btn_nl }}</a>
+</div></div>
+
+{{ partial "footer.html" . }}
+
+{{ partial "script.html" . }}
+<script>
+Object.assign(T.nl,{
+  nfTag:"{{ $p.notfound_tag_nl }}",nfTitle:"{{ $p.notfound_title_nl }}",
+  nfText:"{{ $p.notfound_text_nl }}",nfBtn:"{{ $p.notfound_btn_nl }}"
+});
+Object.assign(T.en,{
+  nfTag:"{{ $p.notfound_tag_en | default $p.notfound_tag_nl }}",nfTitle:"{{ $p.notfound_title_en | default $p.notfound_title_nl }}",
+  nfText:"{{ $p.notfound_text_en | default $p.notfound_text_nl }}",nfBtn:"{{ $p.notfound_btn_en | default $p.notfound_btn_nl }}"
+});
+</script>
+</body>
+</html>
