@@ -26,16 +26,16 @@
     <div>
       <h4>Watdajel Creative & Sustainable</h4>
       <ul>
-        <li class="ft-label">Algemene informatie:</li>
+        <li class="ft-label"><span data-t="ftGeneral">{{ .Site.Home.Params.footer_general_nl }}</span>:</li>
         <li><a href="mailto:info@watdajel.com">info@watdajel.com</a></li>
-        <li class="ft-label">Informatie kantoor / verhuur:</li>
+        <li class="ft-label"><span data-t="ftRental">{{ .Site.Home.Params.footer_rental_nl }}</span>:</li>
         <li><a href="mailto:verhuur@watdajel.com">verhuur@watdajel.com</a></li>
-        <li class="ft-label">Tel:</li>
+        <li class="ft-label"><span data-t="ftPhone">{{ .Site.Home.Params.footer_phone_nl }}</span>:</li>
         <li><a href="tel:+31647397400">+31 6 47397400</a></li>
       </ul>
     </div>
   </div>
   <div class="ft-bot">
-    <span>&copy;2026 WATDAJEL CREATIVE & SUSTAINABLE B.V. - THE NETHERLANDS All rights reserved.</span>
+    <span>&copy;2026 WATDAJEL CREATIVE & SUSTAINABLE B.V. - THE NETHERLANDS <span data-t="ftRights">{{ .Site.Home.Params.footer_rights_nl }}</span></span>
   </div>
 </footer>

@@ -101,6 +101,14 @@ card_link_nl: Meer info
 card_link_en: Learn more
 footer_pages_nl: Pagina's
 footer_pages_en: Pages
+footer_general_nl: Algemene informatie
+footer_general_en: General information
+footer_rental_nl: Informatie kantoor / verhuur
+footer_rental_en: Office / rental information
+footer_phone_nl: Tel
+footer_phone_en: Phone
+footer_rights_nl: Alle rechten voorbehouden.
+footer_rights_en: All rights reserved.
 nav_welcome_nl: Welkom
 nav_welcome_en: Welcome
 nav_work_nl: Workspaces

@@ -102,6 +102,14 @@ content:
       - { name: lang_switch_en, label: "Mobile menu · Language switch (shown in EN)", type: string }
       - { name: footer_pages_nl, label: "Footer · Pages heading (NL)", type: string }
       - { name: footer_pages_en, label: "Footer · Pages heading (EN)", type: string }
+      - { name: footer_general_nl, label: "Footer · General info label (NL)", type: string }
+      - { name: footer_general_en, label: "Footer · General info label (EN)", type: string }
+      - { name: footer_rental_nl, label: "Footer · Office/rental label (NL)", type: string }
+      - { name: footer_rental_en, label: "Footer · Office/rental label (EN)", type: string }
+      - { name: footer_phone_nl, label: "Footer · Phone label (NL)", type: string }
+      - { name: footer_phone_en, label: "Footer · Phone label (EN)", type: string }
+      - { name: footer_rights_nl, label: "Footer · Copyright notice (NL)", type: string }
+      - { name: footer_rights_en, label: "Footer · Copyright notice (EN)", type: string }
 
   - name: steenweg
     label: Steenweg page
