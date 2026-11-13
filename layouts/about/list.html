@@ -1,36 +1,23 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About — Watdajel</title>
-<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+{{ partial "head.html" (dict "title" "About — Watdajel" "description" "Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt." "ogDescription" "Hier geloven we dat de omgeving waarin je werkt, een wereld van verschil maakt." "ctx" .) }}
+<body>
+
 <style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-body{font-family:"Outfit",-apple-system,sans-serif;color:#1A1A1A;background:#fff;min-height:100vh;display:flex;flex-direction:column;-webkit-font-smoothing:antialiased}
-.n{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(0,0,0,.06);position:fixed;top:0;left:0;right:0;z-index:100}
-.n-i{max-width:1320px;margin:0 auto;padding:0 48px;height:72px;display:flex;align-items:center;justify-content:space-between}
-.n-logo{display:block;width:140px;height:36px}
-.n-logo img{display:block;width:100%;height:100%}
-.n-back{font-size:14px;font-weight:500;color:#6B6B6B;text-decoration:none;padding:8px 20px;border-radius:50px;border:1.5px solid #E0E0E0;transition:all .25s}
-.n-back:hover{color:#1A1A1A;border-color:#1A1A1A}
-.pg{flex:1;padding:140px 48px 80px;background:#F8F6F3}
+/* ── ABOUT PAGE (pg-) ── */
+.pg{padding:140px 48px 80px;background:var(--warm)}
 .pg-c{max-width:760px;margin:0 auto}
-.pg-tag{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:#6B1D3A;margin-bottom:24px}
-.pg-t{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(32px,5vw,56px);font-weight:500;font-style:italic;color:#1A1A1A;line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
-.pg-sub{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(22px,3vw,32px);font-weight:400;font-style:italic;color:#1A1A1A;line-height:1.35;margin-bottom:48px}
-.pg-body{font-size:17px;color:#6B6B6B;line-height:1.8;margin-bottom:32px}
-.pg-cta{font-size:17px;color:#1A1A1A;font-weight:600;line-height:1.8}
+.pg-tag{font-family:var(--sans);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--forest);margin-bottom:24px}
+.pg-t{font-family:var(--serif);font-size:clamp(32px,5vw,56px);font-weight:500;font-style:italic;color:var(--charcoal);line-height:1.15;letter-spacing:-.02em;margin-bottom:16px}
+.pg-sub{font-family:var(--serif);font-size:clamp(22px,3vw,32px);font-weight:400;font-style:italic;color:var(--charcoal);line-height:1.35;margin-bottom:48px}
+.pg-body{font-family:var(--sans);font-size:17px;color:var(--g600);line-height:1.8;margin-bottom:32px}
 @media(max-width:640px){
   .pg{padding:120px 24px 60px}
 }
 </style>
-</head>
-<body>
-<nav class="n"><div class="n-i"><a href="/" class="n-logo"><img src="/brand/logo-dark.png" alt="Watdajel" width="600" height="154"></a><a href="/" class="n-back">← Back</a></div></nav>
+
+{{ partial "nav.html" . }}
+
 <div class="pg"><div class="pg-c">
   <div class="pg-tag">Over Watdajel</div>
   <h1 class="pg-t">Welkom bij Watdajel Workspaces.</h1>
@@ -38,4 +25,9 @@ body{font-family:"Outfit",-apple-system,sans-serif;color:#1A1A1A;background:#fff
   <p class="pg-body">Steeds meer mensen breken met vaste structuren en zoeken een plek die past bij hoe zij willen leven en werken. Bij Watdajel Workspaces vind je die plek: een duurzame, inspirerende werkplek in hartje Utrecht waar focus vanzelf komt, ontmoetingen je energie geven, en werken voelt als iets wat je wílt. Waar ondernemerschap, duurzaamheid, cultuur en community samenkomen. De toekomst van werken begint hier. Sluit je aan!</p>
   <p class="pg-body">Watdajel is de perfecte ruimte voor iedereen die een toffe sustainable werkplek zoekt. In deze circulaire hub – in het hart van Utrecht – stappen ondernemers en organisaties een ervaring binnen die ze inspiratie en creativiteit oplevert. Of ze nu komen om te focussen of anderen te ontmoeten, in onze workspaces kan het allemaal.</p>
 </div></div>
-</body></html>
+
+{{ partial "footer.html" . }}
+
+{{ partial "script.html" . }}
+</body>
+</html>
